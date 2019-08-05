@@ -1,18 +1,24 @@
+body {
+  background: silver;
+}
+
 .App {
   text-align: center;
-  background: silver;
 }
 
 
 .home {
   height: 100vh;
 }
+.hello {
+  font-size: 30px;
+}
 
 
 .About {
   height: 100vh;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -26,12 +32,11 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
 }
 .aboutCard {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 10rem;
 }
@@ -44,3 +49,4 @@
   align-items: center;
   border-radius: 100%;
 }
+

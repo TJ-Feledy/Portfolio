@@ -11,7 +11,7 @@ class Home extends React.Component {
     return (
       <div className='home'>
         <p className='hello'>Hello, my name is <span className='name'>Theodore Feledy.</span></p>
-        <h3 className='homeLink' onClick={this.aboutClick} >Click Me! <i className="fas fa-caret-right"></i></h3>
+        <h3 className='homeLink' onClick={this.aboutClick} >Let's get started! <i className="fas fa-caret-right"></i></h3>
       </div>
     )
   }
