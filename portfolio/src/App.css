@@ -9,9 +9,56 @@ body {
 
 .home {
   height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(yellowgreen -50%, silver)
 }
 .hello {
   font-size: 30px;
+  font-weight: 400;
+}
+.name {
+  font-size: 34px;
+  font-weight: 50;
+}
+@keyframes swing
+{
+    15%
+    {
+        transform: translateX(5px);
+    }
+    30%
+    {
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        transform: translateX(3px);
+    }
+    65%
+    {
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        transform: translateX(2px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+.homeLink {
+  border: solid 2px black;
+  padding: .2rem .5rem;
+}
+.homeLink:hover {
+  animation: swing 1s ease;
+  animation-iteration-count: 1;
+  background: black;
+  color: white;
 }
 
 
@@ -21,6 +68,7 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(silver, blue 300%)
 }
 .aboutHeader {
   margin-bottom: 0;
