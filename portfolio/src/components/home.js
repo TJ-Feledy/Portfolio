@@ -7,7 +7,7 @@ class Home extends React.Component {
     return (
       <div className='home'>
         <p className='hello'>Hello, my name is <span className='name'>Theodore Feledy.</span></p>
-        <Link className='homeLink' to='/about'>Click Me! <i class="fas fa-caret-right"></i></Link>
+        <Link className='homeLink' to='/about'>Click Me! <i className="fas fa-caret-right"></i></Link>
       </div>
     )
   }
