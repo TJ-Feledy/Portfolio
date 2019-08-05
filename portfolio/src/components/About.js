@@ -12,7 +12,7 @@ class About extends React.Component {
           <div className='aboutCard'>
             <div className='iconWrapper'><i className="fas fa-globe fa-4x"></i></div>
             <h2 className='aboutH2'>Intuitive</h2>
-            <p className='aboutP'>Being user friendly and ease of navigation are top priorities.</p>
+            <p className='aboutP'>User friendly design and ease of navigation are top priorities.</p>
           </div>
           <div className='aboutCard'>
             <div className='iconWrapper'><i className="fas fa-heartbeat fa-4x"></i></div>

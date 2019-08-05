@@ -90,6 +90,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 10rem;
+  margin: .5rem;
 }
 .iconWrapper {
   background: greenyellow;
