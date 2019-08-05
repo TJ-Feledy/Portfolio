@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       
       <Route path='/' render={props => <Home {...props} /> } />
-      <Route path='/about' render={props => <About {...props} /> } />
+      <Route path='/' render={props => <About {...props} /> } />
     </div>
   );
 }
