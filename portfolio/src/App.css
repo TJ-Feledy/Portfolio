@@ -59,6 +59,7 @@ body {
 .homeLink {
   font-family: sans-serif;
   border: solid 2px black;
+  border-radius: 5px;
   padding: .2rem .5rem;
 }
 .homeLink:hover {
@@ -71,53 +72,64 @@ body {
 
 .About {
   height: 100vh;
+  position: relative;
+  opacity: 12;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-image: radial-gradient(circle at 50% 23%,silver 10%, silver 10%, rgb(43, 43, 43));
-  animation: fly 15s ease-in-out infinite;
+  --y: -500%;
+  --x: 10%;
+  background-image: radial-gradient(circle at var(--x) var(--y),rgb(255, 255, 255) .01%, rgb(32, 32, 32) .5%, rgb(26, 26, 26));
+  animation: a 4s ease infinite;
+  animation-name: y, x;
+  animation-duration: 3s, 3.5s;
 }
-@keyframes fly {
-	0% {
-		background-image: radial-gradient(circle at 50% 0%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	10% {
-		background-image: radial-gradient(circle at 50% 10%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	20% {
-		background-image: radial-gradient(circle at 50% 20%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	30% {
-		background-image: radial-gradient(circle at 50% 30%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	40% {
-		background-image: radial-gradient(circle at 50% 40%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	50% {
-		background-image: radial-gradient(circle at 50% 50%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	60% {
-		background-image: radial-gradient(circle at 50% 60%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	70% {
-		background-image: radial-gradient(circle at 50% 70%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	80% {
-		background-image: radial-gradient(circle at 50% 80%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	90% {
-		background-image: radial-gradient(circle at 50% 90%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
-	100% {
-		background-image: radial-gradient(circle at 50% 98%,silver 10%, silver 10%, rgb(43, 43, 43));
-	}
+.About:after {
+  content: '';
+  position: absolute;
+  overflow: hidden;
+  /* opacity: ; */
+  left: var(--x);
+  top: var(--y);
+  /* right: 0; */
+  /* bottom: 0; */
+  --y: -500%;
+  --x: 10%;
+  background: white;
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  animation: a 4s linear -2s infinite;
+  animation-name: y2, x;
+  animation-duration: 2s, 5.3s;
+}
+@keyframes y {
+	to {
+    --y: 500%
+  }
+}
+@keyframes y2 {
+  to {
+    --y: 100%
+  }
+}
+@keyframes x {
+	to {
+    --x: 90%
+  }
 }
 .aboutHeader {
   margin-bottom: 0;
+  color: white;
+  text-shadow: 0px 0px 14px silver;
+}
+.iconContainer {
+
 }
 .fa-wave-square {
   margin-bottom: 150px;
+  color: white;
 }
 .aboutCards {
   display: flex;
@@ -187,6 +199,9 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+}
+#curve {
+  /* transform: rotate(180deg); */
 }
 .aboutP {
   font-weight: 500;
