@@ -76,6 +76,42 @@ body {
   justify-content: center;
   align-items: center;
   background-image: radial-gradient(circle at 50% 23%,silver 10%, silver 10%, rgb(43, 43, 43));
+  animation: fly 15s ease infinite;
+}
+@keyframes fly {
+	0% {
+		background-image: radial-gradient(circle at 50% 0%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	10% {
+		background-image: radial-gradient(circle at 50% 10%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	20% {
+		background-image: radial-gradient(circle at 50% 20%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	30% {
+		background-image: radial-gradient(circle at 50% 30%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	40% {
+		background-image: radial-gradient(circle at 50% 40%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	50% {
+		background-image: radial-gradient(circle at 50% 50%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	60% {
+		background-image: radial-gradient(circle at 50% 60%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	70% {
+		background-image: radial-gradient(circle at 50% 70%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	80% {
+		background-image: radial-gradient(circle at 50% 80%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	90% {
+		background-image: radial-gradient(circle at 50% 90%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
+	100% {
+		background-image: radial-gradient(circle at 50% 98%,silver 10%, silver 10%, rgb(43, 43, 43));
+	}
 }
 .aboutHeader {
   margin-bottom: 0;
@@ -133,13 +169,13 @@ body {
 }
 @keyframes thrust1 {
   0% {
-    border-right: 85px solid;
+    border-right: 82px solid;
   }
   50% {
     border-right: 60px solid;
   }
   100% {
-    border-right: 85px solid;
+    border-right: 82px solid;
   }
 }
 
