@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  font-family: 'Patrick Hand', sans-serif;
   background: silver;
 }
 
@@ -17,14 +18,16 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  /* background-image: linear-gradient(rgb(43, 43, 43),silver 50%,rgb(43, 43, 43)); */
+  background-image: radial-gradient(ellipse at 50% 50%,silver 1%, silver 1%, rgb(43, 43, 43));
 }
 .hello {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 400;
 }
 .name {
-  font-size: 34px;
-  font-weight: 50;
+  font-size: 40px;
+  font-weight: bolder;
 }
 @keyframes swing
 {
@@ -54,7 +57,9 @@ body {
     }
 }
 .homeLink {
+  font-family: sans-serif;
   border: solid 2px black;
+  border-radius: 5px;
   padding: .2rem .5rem;
 }
 .homeLink:hover {
@@ -66,39 +71,149 @@ body {
 
 
 .About {
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  opacity: 12;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(silver, blue 300%)
+  --y: -500%;
+  --x: 10%;
+  background-image: radial-gradient(circle at var(--x) var(--y),rgb(255, 255, 255) .01%, rgb(32, 32, 32) 1%, rgb(26, 26, 26));
+  animation: a 4s linear infinite;
+  animation-name: y, x;
+  animation-duration: 2s, 3.5s;
+}
+.About:after {
+  content: '';
+  position: absolute;
+  /* overflow: hidden; */
+  box-shadow: 0px 0px 10px white;
+  /* opacity: ; */
+  left: var(--x);
+  top: var(--y);
+  /* right: 0; */
+  /* bottom: 0; */
+  --y: -800%;
+  --x: 10%;
+  background: white;
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+  animation: a 4s linear -2s infinite;
+  animation-name: y2, x;
+  animation-duration: 3.5s, 10.3s;
+}
+@keyframes y {
+	to {
+    --y: 500%
+  }
+}
+@keyframes y2 {
+  to {
+    --y: 100%
+  }
+}
+@keyframes x {
+	to {
+    --x: 90%
+  }
 }
 .aboutHeader {
   margin-bottom: 0;
+  color: white;
+  text-shadow: 0px 0px 14px silver;
+}
+.aboutLink {
+  text-decoration: none;
+  color: inherit;
 }
 .fa-wave-square {
   margin-bottom: 150px;
+  color: white;
 }
 .aboutCards {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  z-index: 1;
 }
 .aboutCard {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  width: 10rem;
-  margin: .5rem;
+  width: 9rem;
+  margin: .5rem 2rem;
+  padding: 70px 20px 10px;
+  background-image: linear-gradient(to top, white 1%, rgb(24, 24, 24) 2%, gray 10%, white 30%);
+  animation: flash .005s ease-in-out infinite;
+  position: relative;
+  border-radius: 80% 80% 60% 60%/120% 120% 30% 30%;
 }
+@keyframes flash {
+  0% {
+    background-image: linear-gradient(to top, white 1%, rgb(24, 24, 24) 2%, gray 10%, white 30%)
+  }
+  50% {
+    background-image: linear-gradient(to top, white 1.5%, rgb(24, 24, 24) 2.5%, gray 10.5%, white 30%)
+  }
+  100% {
+    background-image: linear-gradient(to top, white 1%, rgb(24, 24, 24) 2%, gray 10%, white 30%)
+  }
+}
+.aboutCard:before,
+.aboutCard:after {
+  content: '';
+  position: absolute;
+  border-bottom: 70px solid rgb(204, 204, 204);
+  border-image: linear-gradient(to top, white 20%, orange, red) 90%;
+  /* border-left: 20px solid; */
+  border-right: 82px solid;
+  top: 390px;
+  left: 48px;
+  transform: rotate(-175deg);
+  animation: thrust1 .05s ease-in-out infinite;
+}
+.aboutCard:after {
+  left: auto;
+  right: 48px;
+  transform: rotate(175deg);
+  animation: thrust1 .05s ease-in-out infinite;
+}
+@keyframes thrust1 {
+  0% {
+    border-right: 82px solid;
+  }
+  50% {
+    border-right: 60px solid;
+  }
+  100% {
+    border-right: 82px solid;
+  }
+}
+
 .iconWrapper {
-  background: greenyellow;
+  background: rgb(0, 125, 226);
   width: 6rem;
   height: 5.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+}
+#curve {
+  /* transform: rotate(180deg); */
+}
+.aboutP {
+  font-weight: 500;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.aboutH2 {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 

@@ -2,12 +2,25 @@ import React from 'react'
 
 class About extends React.Component {
 
-
   render() {
+    window.CSS.registerProperty({
+      name: '--y',
+      syntax: '<length-percentage>',
+      initialValue: '20%',
+      inherits: true
+    })
+    window.CSS.registerProperty({
+      name: '--x',
+      syntax: '<length-percentage>',
+      initialValue: '20%',
+      inherits: true
+    })
     return (
       <div className='About' id='About'>
         <h1 className='aboutHeader'>ABOUT</h1>
-        <i className="fas fa-wave-square fa-lg"></i>
+        <div className='iconContainer'>
+          <i className="fas fa-wave-square fa-lg"></i>
+        </div>
         <div className='aboutCards'>
           <div className='aboutCard'>
             <div className='iconWrapper'><i className="fas fa-globe fa-4x"></i></div>
