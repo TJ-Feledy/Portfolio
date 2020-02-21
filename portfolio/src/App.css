@@ -150,6 +150,11 @@ body {
     --x: 90%
   }
 }
+.aboutContainer {
+  overflow: auto;
+  height: 100vh;
+  margin-top: 80px;
+}
 .aboutHeader {
   margin-bottom: 0;
   color: white;
@@ -175,12 +180,14 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 9rem;
-  margin: .5rem 2rem;
+  height: 311px;
+  margin: 5rem 2rem 5rem;
   padding: 70px 20px 10px;
   background-image: linear-gradient(to top, white 1%, rgb(24, 24, 24) 2%, gray 10%, white 30%);
   animation: flash .005s ease-in-out infinite;
   position: relative;
   border-radius: 80% 80% 60% 60%/120% 120% 30% 30%;
+  z-index: 9;
 }
 @keyframes flash {
   0% {
@@ -205,6 +212,7 @@ body {
   left: 48px;
   transform: rotate(-175deg);
   animation: thrust1 .05s ease-in-out infinite;
+  z-index: 1;
 }
 .aboutCard:after {
   left: auto;
