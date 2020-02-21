@@ -7,6 +7,35 @@ body {
   background: silver;
 }
 
+.Nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: transparent;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  z-index: 1;
+}
+.navLink {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 50px;
+  text-decoration: underline;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 0 14px silver;
+  padding: 0;
+  margin: 0;
+}
+.navLink:hover {
+  text-transform: uppercase;
+}
+
 .App {
   text-align: center;
 }
@@ -121,6 +150,11 @@ body {
     --x: 90%
   }
 }
+.aboutContainer {
+  overflow: auto;
+  height: 100vh;
+  margin-top: 80px;
+}
 .aboutHeader {
   margin-bottom: 0;
   color: white;
@@ -146,12 +180,14 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 9rem;
-  margin: .5rem 2rem;
+  height: 311px;
+  margin: 5rem 2rem 5rem;
   padding: 70px 20px 10px;
   background-image: linear-gradient(to top, white 1%, rgb(24, 24, 24) 2%, gray 10%, white 30%);
   animation: flash .005s ease-in-out infinite;
   position: relative;
   border-radius: 80% 80% 60% 60%/120% 120% 30% 30%;
+  z-index: 9;
 }
 @keyframes flash {
   0% {
@@ -176,6 +212,7 @@ body {
   left: 48px;
   transform: rotate(-175deg);
   animation: thrust1 .05s ease-in-out infinite;
+  z-index: 1;
 }
 .aboutCard:after {
   left: auto;
