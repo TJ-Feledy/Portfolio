@@ -4,18 +4,6 @@ import React from 'react'
 class About extends React.Component {
 
   render() {
-    window.CSS.registerProperty({
-      name: '--y',
-      syntax: '<length-percentage>',
-      initialValue: '20%',
-      inherits: true
-    })
-    window.CSS.registerProperty({
-      name: '--x',
-      syntax: '<length-percentage>',
-      initialValue: '20%',
-      inherits: true
-    })
     return (
       <div className='About' id='About'>
         <h1 className='aboutHeader'>ABOUT</h1>
