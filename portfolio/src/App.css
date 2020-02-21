@@ -76,7 +76,7 @@ body {
   justify-content: center;
   align-items: center;
   background-image: radial-gradient(circle at 50% 23%,silver 10%, silver 10%, rgb(43, 43, 43));
-  animation: fly 15s ease infinite;
+  animation: fly 15s ease-in-out infinite;
 }
 @keyframes fly {
 	0% {
