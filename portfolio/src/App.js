@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
+
 
 import Home from './components/Home.js'
 import About from './components/About.js'
@@ -32,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);
