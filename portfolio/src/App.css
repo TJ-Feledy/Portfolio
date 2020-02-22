@@ -50,7 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   /* background-image: linear-gradient(rgb(43, 43, 43),silver 50%,rgb(43, 43, 43)); */
-  background-image: radial-gradient(ellipse at 50% 50%,rgb(49, 49, 49) 1%, rgb(49, 49, 49) 1%, rgb(26, 26, 26));
+  background-image: radial-gradient(ellipse at 50% 50%,rgb(49, 49, 49) 1%, rgb(49, 49, 49) 1%, rgb(0, 0, 0));
 }
 .hello {
   font-size: 35px;
@@ -245,31 +245,32 @@ body {
   content: '';
   position: absolute;
   border-bottom: 70px solid rgb(204, 204, 204);
-  border-image: linear-gradient(to top, white 20%, orange, red) 90%;
-  /* border-left: 20px solid; */
-  border-right: 82px solid;
-  top: 490px;
-  left: 48px;
+  border-image: linear-gradient(to top, white 40%, orange, red 120%);
+  /* border-left: 10px solid; */
+  border-right: 45px solid;
+  top: 486px;
+  right: 67px;
   transform: rotate(-175deg);
   animation: thrust1 .05s ease-in-out infinite;
   z-index: 1;
   box-shadow: 0px 0 60px white;
+  opacity: .6;
 }
 .aboutCard:after {
-  left: auto;
-  right: 48px;
+  right: auto;
+  left: 67px;
   transform: rotate(175deg);
-  animation: thrust1 .05s ease-in-out infinite;
+  /* animation: thrust1 .05s ease-in-out infinite; */
 }
 @keyframes thrust1 {
   0% {
-    border-right: 82px solid;
+    border-right: 45px solid;
   }
   50% {
-    border-right: 60px solid;
+    border-right: 35px solid;
   }
   100% {
-    border-right: 82px solid;
+    border-right: 45px solid;
   }
 }
 
