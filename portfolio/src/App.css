@@ -121,6 +121,7 @@ body {
   animation: a 4s linear infinite;
   animation-name: y, x;
   animation-duration: 2s, 3.5s;
+  animation-direction: normal, alternate;
 }
 .About:after {
   content: '';
@@ -141,6 +142,7 @@ body {
   animation: a 4s linear -2s infinite;
   animation-name: y2, x;
   animation-duration: 5.5s, 13.3s;
+  animation-direction: normal, alternate;
 }
 .About:before {
   content: '';
@@ -161,6 +163,7 @@ body {
   animation: a 4s linear -2s infinite;
   animation-name: y2, x;
   animation-duration: 3.5s, 15.3s;
+  animation-direction: normal, alternate;
 }
 @keyframes y {
 	to {
@@ -273,7 +276,7 @@ body {
 .iconWrapper {
   --y: -500%;
   --x: 10%;
-  background: radial-gradient(circle at var(--x) var(--y), silver -75%,black 40%);
+  background: radial-gradient(circle at var(--x) var(--y), rgb(150, 150, 150) 3%, rgb(99, 99, 99) 1%,black 88%);
   color: rgb(0, 119, 255);
   width: 6rem;
   height: 5.7rem;
@@ -281,9 +284,10 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  animation: a 4s linear infinite;
+  animation: y 4s ease-in-out infinite;
   animation-name: y, x;
-  animation-duration: 1.5s, 3.5s;
+  animation-duration: 2.2s, 3.5s;
+  animation-direction: normal, alternate;
 }
 .aboutP {
   font-weight: 500;
