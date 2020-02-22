@@ -172,7 +172,7 @@ body {
   color: inherit;
 }
 .fa-wave-square {
-  margin-bottom: 150px;
+  margin-bottom: 60px;
   color: white;
 }
 .aboutCards {
@@ -180,6 +180,16 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   z-index: 1;
+  animation: flyUp 5s ease-out;
+  margin-top: 0px;
+  
+}
+.aboutContainer::-webkit-scrollbar {
+  display: none;
+}
+@keyframes flyUp {
+  from {margin-top: 800px;}
+  to {margin-top: 0;}
 }
 .aboutCard {
   display: flex;
@@ -187,7 +197,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 9rem;
-  height: 311px;
+  height: 411px;
   margin: 5rem 2rem 5rem;
   padding: 70px 20px 10px;
   background-image: linear-gradient(to top, white 1%, rgb(24, 24, 24) 2%, gray 10%, white 30%);
@@ -215,7 +225,7 @@ body {
   border-image: linear-gradient(to top, white 20%, orange, red) 90%;
   /* border-left: 20px solid; */
   border-right: 82px solid;
-  top: 390px;
+  top: 490px;
   left: 48px;
   transform: rotate(-175deg);
   animation: thrust1 .05s ease-in-out infinite;
