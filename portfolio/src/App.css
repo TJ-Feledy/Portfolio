@@ -271,16 +271,19 @@ body {
 }
 
 .iconWrapper {
-  background: rgb(0, 125, 226);
+  --y: -500%;
+  --x: 10%;
+  background: radial-gradient(circle at var(--x) var(--y), silver -75%,black 40%);
+  color: rgb(0, 119, 255);
   width: 6rem;
   height: 5.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-}
-#curve {
-  /* transform: rotate(180deg); */
+  animation: a 4s linear infinite;
+  animation-name: y, x;
+  animation-duration: 1.5s, 3.5s;
 }
 .aboutP {
   font-weight: 500;
