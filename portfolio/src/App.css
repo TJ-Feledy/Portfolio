@@ -43,12 +43,14 @@ body {
 
 .home {
   height: 100vh;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 34px white;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   /* background-image: linear-gradient(rgb(43, 43, 43),silver 50%,rgb(43, 43, 43)); */
-  background-image: radial-gradient(ellipse at 50% 50%,silver 1%, silver 1%, rgb(43, 43, 43));
+  background-image: radial-gradient(ellipse at 50% 50%,rgb(49, 49, 49) 1%, rgb(49, 49, 49) 1%, rgb(26, 26, 26));
 }
 .hello {
   font-size: 35px;
@@ -87,7 +89,11 @@ body {
 }
 .homeLink {
   font-family: sans-serif;
-  border: solid 2px black;
+  text-shadow: none;
+  color: black;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 74px white;
+  border: solid 2px rgb(233, 233, 233);
   border-radius: 5px;
   padding: .2rem .5rem;
 }
@@ -95,6 +101,7 @@ body {
   animation: swing 1s ease;
   animation-iteration-count: 1;
   background: black;
+  text-shadow: 0 0 14px white;
   color: white;
 }
 
@@ -213,6 +220,7 @@ body {
   transform: rotate(-175deg);
   animation: thrust1 .05s ease-in-out infinite;
   z-index: 1;
+  box-shadow: 0px 0 60px white;
 }
 .aboutCard:after {
   left: auto;
