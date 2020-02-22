@@ -203,7 +203,7 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   z-index: 1;
-  animation: flyUp 5s ease-out;
+  animation: flyUp 3s ease-out;
   margin-top: 0px;
   
 }
