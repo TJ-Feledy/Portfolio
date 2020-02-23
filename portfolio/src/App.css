@@ -436,6 +436,7 @@ body {
 .infoContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .meContainer {
   position: relative;
@@ -443,13 +444,14 @@ body {
   height: 306;
   padding: 0px;
   margin: 0px;
+  overflow: hidden;
 }
 .meContainer:before { 
   content: ""; 
   position: absolute;  
-  top: 0px;
+  top: -40px;
   left: 9px; 
-  border-bottom: 120px solid transparent; 
+  border-bottom: 70px solid transparent; 
   border-left: 69px solid black; 
   border-right: 70px solid black; 
   width: 42px;
@@ -458,11 +460,11 @@ body {
 .meContainer:after { 
   content: ""; 
   position: absolute; 
-  bottom: 5px; 
+  bottom: -35px; 
   left: 9px; 
-  border-top: 120px solid transparent; 
+  border-top: 70px solid transparent; 
   border-left: 69px solid black; 
   border-right: 70px solid black; 
   width: 42px; 
   height: 0px; 
-} 
+}
