@@ -6,6 +6,9 @@ class About extends React.Component {
   render() {
     return (
       <div className='About' id='About'>
+        <div className='star1 star' />
+        <div className='star2 star' />
+        <div className='star3 star' />
         <div className='aboutContainer'>
           <h1 className='aboutHeader'>ABOUT</h1>
           <div className='iconContainer'>
@@ -34,6 +37,7 @@ class About extends React.Component {
             </div>
           </div>
         </div>
+        <div className='aboutBackground'/>
       </div>
     )
   }
