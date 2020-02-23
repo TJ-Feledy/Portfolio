@@ -27,16 +27,18 @@ function App({ location }) {
   return (
     <div className="App">
       <Nav />
-      <TransitionGroup>
+      <TransitionGroup className='transitionGroup'>
         <CSSTransition 
           key={location.key} 
-          timeout={{ enter: 300, exit: 300 }}
+          timeout={{ enter: 500, exit: 500 }}
           classNames={'fade'}
         >
-          <Switch location={location}>
-            <Route exact path='/' render={props => <Home {...props} /> } />
-            <Route path='/about' render={props => <About {...props} /> } />
-          </Switch>
+          <section className='routeSection'>
+            <Switch location={location}>
+              <Route exact path='/' render={props => <Home {...props} /> } />
+              <Route path='/about' render={props => <About {...props} /> } />
+            </Switch>
+          </section>
         </CSSTransition>
       </TransitionGroup>
     </div>
