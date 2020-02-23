@@ -349,17 +349,44 @@ body {
   right: auto;
   left: 67px;
   transform: rotate(175deg);
-  /* animation: thrust1 .05s ease-in-out infinite; */
+}
+.flameTip {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid rgb(255, 38, 0);
+  position: absolute;
+  bottom: -72px;
+  opacity: .6;
+  animation: thrust2 .07s ease-in-out infinite;
+}
+@keyframes thrust2 {
+  0% {
+    transform: rotate(10deg);
+    bottom: -72;
+  }
+  50% {
+    transform: rotate(0deg);
+    bottom: -76px
+  }
+  100% {
+    transform: rotate(-10deg);
+    bottom: -72;
+  }
 }
 @keyframes thrust1 {
   0% {
     border-right: 45px solid;
+    top: 486px
   }
   50% {
     border-right: 35px solid;
+    top: 490px
   }
   100% {
     border-right: 45px solid;
+    top: 486px
   }
 }
 
