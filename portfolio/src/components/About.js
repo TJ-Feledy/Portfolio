@@ -19,21 +19,25 @@ class About extends React.Component {
               <div className='iconWrapper'><i className="fas fa-globe fa-4x"></i></div>
               <h2 className='aboutH2'>Intuitive</h2>
               <p className='aboutP'>User friendly design and ease of navigation are top priorities.</p>
+              <div className='flameTip' />
             </div>
             <div className='aboutCard'>
               <div className='iconWrapper'><i className="fas fa-heartbeat fa-4x"></i></div>
               <h2 className='aboutH2'>Dynamic</h2>
               <p className='aboutP'>I love breathing life into a webpage.</p>
+              <div className='flameTip' />
             </div>
             <div className='aboutCard'>
               <div className='iconWrapper'><i className="fas fa-expand-arrows-alt fa-4x"></i></div>
               <h2 className='aboutH2'>Responsive</h2>
               <p className='aboutP'>Order at all levels. Creating a responsive design is what I do.</p>
+              <div className='flameTip' />
             </div>
             <div className='aboutCard'>
               <div className='iconWrapper'><i className="fas fa-cog fa-4x fa-spin"></i></div>
               <h2 className='aboutH2'>Functional</h2>
               <p className='aboutP'>If you can dream it, I can make it work.</p>
+              <div className='flameTip' />
             </div>
           </div>
         </div>
