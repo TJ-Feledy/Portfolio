@@ -433,3 +433,36 @@ body {
   color: white;
   text-shadow: 0px 0px 14px silver;
 }
+.infoContainer {
+  display: flex;
+  justify-content: center;
+}
+.meContainer {
+  position: relative;
+  width: 200px;
+  height: 306;
+  padding: 0px;
+  margin: 0px;
+}
+.meContainer:before { 
+  content: ""; 
+  position: absolute;  
+  top: 0px;
+  left: 9px; 
+  border-bottom: 120px solid transparent; 
+  border-left: 69px solid black; 
+  border-right: 70px solid black; 
+  width: 42px;
+  height: 0px; 
+} 
+.meContainer:after { 
+  content: ""; 
+  position: absolute; 
+  bottom: 5px; 
+  left: 9px; 
+  border-top: 120px solid transparent; 
+  border-left: 69px solid black; 
+  border-right: 70px solid black; 
+  width: 42px; 
+  height: 0px; 
+} 
