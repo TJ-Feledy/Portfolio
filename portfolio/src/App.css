@@ -310,6 +310,13 @@ body {
   position: relative;
   border-radius: 80% 80% 60% 60%/120% 120% 30% 30%;
   z-index: 9;
+  top: 0px;
+  bottom: 0;
+  transition: top 1s;
+  transition-timing-function: ease-in-out;
+}
+.aboutCard:hover {
+  top: -100px;
 }
 @keyframes flash {
   0% {
