@@ -13,12 +13,6 @@ class About extends React.Component {
         </div>
 {/* main - page - info */}
         <div className='infoContainer'>
-{/* My picture */}
-          <div className='meWrapper'>
-            <div className='meContainer'>
-              <img src={me} className='meImg' alt='Handsome Man' />
-            </div>
-          </div>
 {/* Tech-Stack */}
           <div className='techStack'>
             <h2 className='techHeader stackHeader'>Tech-Stack</h2>
@@ -44,6 +38,14 @@ class About extends React.Component {
                   </div>
 
                 </div>
+              </div>
+            </div>
+          </div>
+{/* My picture/bio */}
+          <div className='Me'>
+            <div className='meWrapper'>
+              <div className='meContainer'>
+                <img src={me} className='meImg' alt='Handsome Man' />
               </div>
             </div>
           </div>
