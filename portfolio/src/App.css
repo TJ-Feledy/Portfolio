@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   font-family: 'Patrick Hand', sans-serif;
@@ -12,8 +15,8 @@ body {
   justify-content: space-evenly;
   align-items: center;
   background: transparent;
-  position: absolute;
-  top: 20px;
+  position: fixed;
+  top: 10px;
   width: 100%;
   z-index: 2;
 }
@@ -22,15 +25,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1rem;
-  height: 50px;
+  width: 5.3rem;
+  height: 40px;
+  border-radius: 8px;
   text-decoration: underline;
   font-size: 1.4rem;
   font-weight: 600;
   color: white;
-  text-shadow: 0 0 14px silver;
+  text-shadow: 0 0 14px white;
   padding: 0;
+  padding-bottom: 8px;
   margin: 0;
+  background: rgba(0, 0, 0, 0.514);
 }
 .navLink:hover {
   text-transform: uppercase;
@@ -257,7 +263,7 @@ body {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1370&q=80');
+  background-image: url('./images/space.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   opacity: .3;
@@ -266,7 +272,7 @@ body {
 .aboutHeader {
   margin-bottom: 0;
   color: white;
-  text-shadow: 0px 0px 14px silver;
+  text-shadow: 0px 0px 14px white;
   z-index: 1;
   position: relative;
 }
@@ -419,3 +425,125 @@ body {
   margin-bottom: 0px;
 }
 
+/* ---------------------Profile----------------- */
+.routeSection {
+  background: black;
+  height: 100vh;
+}
+.routeSection::-webkit-scrollbar {
+  display: none;
+}
+.Profile::-webkit-scrollbar {
+  display: none;
+}
+.Profile {
+  background: black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  margin-top: 80px;
+}
+.skillsHeader {
+  margin-bottom: 0;
+  margin-top: 100px;
+  color: white;
+  text-shadow: 0px 0px 14px silver;
+}
+.infoContainer {
+  display: flex;
+  max-width: 1250px;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+}
+.meContainer {
+  position: relative;
+  width: 200px;
+  height: 306;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+.meContainer:before { 
+  content: ""; 
+  position: absolute;  
+  top: -40px;
+  left: 9px; 
+  border-bottom: 70px solid transparent; 
+  border-left: 69px solid black; 
+  border-right: 70px solid black; 
+  width: 43px;
+  height: 0px; 
+} 
+.meContainer:after { 
+  content: ""; 
+  position: absolute; 
+  bottom: -35px; 
+  left: 9px; 
+  border-top: 70px solid transparent; 
+  border-left: 69px solid black; 
+  border-right: 70px solid black; 
+  width: 43px; 
+  height: 0px; 
+}
+.meWrapper {
+  transform: rotate();
+  top: 0;
+  left: 0px;
+  position: relative;
+  animation: skid 4s ease-out;
+}
+@keyframes skid {
+  0% {
+    transform: rotate(-45deg);
+    left: -1800px;
+  }
+  25% {
+    left: -1800px;
+  }
+  60% {
+    transform: rotate(-45deg);
+  }
+  65% {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  67.5% {
+    transform: rotate(0deg);
+    top: -25px;
+  }
+  70% {
+    transform: rotate(35deg);
+    top: 0;
+  }
+  72% {
+    transform: rotate(35deg);
+    top: -8px;
+  }
+  74% {
+    transform: rotate(35deg);
+    top: 0;
+  }
+  76% {
+    transform: rotate(35deg);
+    top: -8px;
+  }
+  78% {
+    transform: rotate(35deg);
+    top: 0;
+  }
+  85% {
+    transform: rotate(40deg);
+  }
+  95% {
+    transform: rotate(40deg);
+    left: 20px;
+  }
+  100% {
+    transform: rotate(0deg);
+    left: 0;
+  }
+}

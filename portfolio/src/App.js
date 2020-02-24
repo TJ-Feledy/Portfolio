@@ -4,6 +4,7 @@ import { Route, Switch, withRouter } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 import Home from './components/Home.js'
+import Values from './components/Values.js'
 import About from './components/About.js'
 import Nav from './components/Nav.js'
 
@@ -37,6 +38,7 @@ function App({ location }) {
             <Switch location={location}>
               <Route exact path='/' render={props => <Home {...props} /> } />
               <Route path='/about' render={props => <About {...props} /> } />
+              <Route path='/values' render={props => <Values {...props} /> } />
             </Switch>
           </section>
         </CSSTransition>
