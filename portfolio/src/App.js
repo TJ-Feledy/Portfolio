@@ -37,7 +37,7 @@ function App({ location }) {
           <section className='routeSection'>
             <Switch location={location}>
               <Route exact path='/' render={props => <Home {...props} /> } />
-              <Route path='/about' render={props => <Values {...props} /> } />
+              <Route path='/about' render={props => <About {...props} /> } />
               <Route path='/values' render={props => <Values {...props} /> } />
             </Switch>
           </section>
