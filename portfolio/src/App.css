@@ -517,33 +517,39 @@ body {
   }
   70% {
     transform: rotate(35deg);
-    top: 0;
+    top: -6px;
   }
   72% {
     transform: rotate(35deg);
-    top: -8px;
+    top: -14px;
   }
   74% {
     transform: rotate(35deg);
-    top: 0;
+    top: -6px;
   }
   76% {
     transform: rotate(35deg);
-    top: -8px;
+    top: -14px;
   }
   78% {
     transform: rotate(35deg);
-    top: 0;
+    top: -6px;
   }
   85% {
     transform: rotate(40deg);
+    top: -6px
   }
-  95% {
+  93% {
     transform: rotate(40deg);
-    left: 20px;
+    left: 90px;
+    top: -6px;
+  }
+  96.5% {
+    top: -6px;
   }
   100% {
     transform: rotate(0deg);
     left: 0;
+    top: 0;
   }
 }
