@@ -582,13 +582,14 @@ body {
 .techHeader {
   margin-bottom: 20px;
   color: white;
-  text-shadow: 0px 0px 14px white;
+  text-shadow: 0px 0px 10px white;
   text-decoration: underline;
   align-self: center;
 }
 .stackHeader {
   font-size: 28px;
   text-decoration: none;
+  text-shadow: 0px 0px 14px white;
 }
 .languageContainer {
   display: flex;
@@ -599,6 +600,7 @@ body {
 .techName {
   width: 100%;
   color: white;
+  text-shadow: 0px 0px 8px white;
   font-size: 23px;
   display: flex;
   justify-content: flex-start;
