@@ -455,7 +455,8 @@ body {
 .infoContainer {
   display: flex;
   max-width: 1250px;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-evenly;
   align-items: center;
   /* position: relative; */
 }
@@ -552,4 +553,34 @@ body {
     left: 0;
     top: 0;
   }
+}
+
+.techStack {
+  width: 33.3%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.techContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.techHeader {
+  margin-bottom: 0;
+  color: white;
+  text-shadow: 0px 0px 14px white;
+}
+.frontContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.backContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }

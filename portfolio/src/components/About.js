@@ -16,6 +16,17 @@ class About extends React.Component {
               <img src={me} className='meImg' alt='Handsome Man' />
             </div>
           </div>
+          <div className='techStack'>
+            <h2 className='techHeader'>Tech-Stack</h2>
+            <div className='techContainer'>
+              <div className='frontContainer'>
+                <h3 className='techHeader'>Front-End</h3>
+              </div>
+              <div className='backContainer'>
+                <h3 className='techHeader'>Back-End</h3>
+              </div>
+            </div>
+          </div>
         </div>
         
       </div>
