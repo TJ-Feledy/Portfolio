@@ -36,8 +36,8 @@ class About extends React.Component {
                 <h2 className='techHeader'>Back-End</h2>
                 <div className='techInfoContainer'>
                   <div className='languageContainer'>
-                    <p className='techName'><i class="fab fa-node-js techIcon" /> - NODE</p>
-                    <p className='techName'><i class="fab fa-node-js techIcon" /> - EXPRESS</p>
+                    <p className='techName'><i className="fab fa-node-js techIcon" /> - EXPRESS</p>
+                    <p className='techName'><i className="fab fa-node-js techIcon" /> - NODE</p>
                     <p className='techName'><img className="techIcon sqlite" src={sqlite} /> - SQLITE3</p>
                   </div>
                 </div>

@@ -590,6 +590,7 @@ body {
 }
 .bioText {
   padding: 20px 10px;
+  animation: fade 8s linear;
 }
 .bioLine {
   padding-left: 15px;
@@ -701,5 +702,7 @@ body {
   padding-right: 16px;
 }
 .sqlite {
- /* background-color: white; */
+  width: 35px;
+  height: 40px;
+  padding-right: 16px;
 }
