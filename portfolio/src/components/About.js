@@ -30,7 +30,6 @@ class About extends React.Component {
                     <p className='techName'><img className="techIcon redux" src={reduxImg} /> - REDUX</p>
                     <p className='techName'><i className="fab fa-css3 techIcon" /> - CSS</p>
                     <p className='techName'><i className="fas fa-code techIcon html" /> - HTML</p>
-                    <p className='techName'><i className="fab fa-python techIcon py" /> - PYTHON</p>
                   </div>
                 </div>
               </div>
@@ -42,6 +41,7 @@ class About extends React.Component {
                     <p className='techName'><i className="fab fa-node-js techIcon" /> - NODE</p>
                     <p className='techName'><img className="techIcon knex" src={knex} /> - KNEX</p>
                     <p className='techName'><img className="techIcon sqlite" src={sqlite} /> - SQLITE3</p>
+                    <p className='techName'><i className="fab fa-python techIcon py" /> - PYTHON</p>
                   </div>
                 </div>
               </div>

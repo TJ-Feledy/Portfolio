@@ -717,7 +717,7 @@ body {
   font-size: 32.3px;
 }
 .py {
-  padding-left: 3.5px;
+  padding-left: 0px;
   padding-right: 16px;
 }
 .sqlite {
