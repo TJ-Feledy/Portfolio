@@ -24,10 +24,11 @@ function App({ location }) {
       inherits: true
     })
   }, [])
-
+  console.log(window.location.pathname)
   return (
     <div className="App">
-      <Nav />
+      {window.location.pathname !== '/' ? <Nav /> : null}
+      
       <TransitionGroup className='transitionGroup'>
         <CSSTransition 
           key={location.key} 

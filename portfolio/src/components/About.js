@@ -1,8 +1,10 @@
 import React from 'react'
+
 import me from '../images/me.jpg'
 import reduxImg from '../images/redux.png'
 import lambda from '../images/lambda-logo.png'
 import sqlite from '../images/sqlite.png'
+import knex from '../images/knex.png'
 
 
 class About extends React.Component {
@@ -38,6 +40,7 @@ class About extends React.Component {
                   <div className='languageContainer'>
                     <p className='techName'><i className="fab fa-node-js techIcon" /> - EXPRESS</p>
                     <p className='techName'><i className="fab fa-node-js techIcon" /> - NODE</p>
+                    <p className='techName'><img className="techIcon knex" src={knex} /> - KNEX</p>
                     <p className='techName'><img className="techIcon sqlite" src={sqlite} /> - SQLITE3</p>
                   </div>
                 </div>
@@ -57,7 +60,7 @@ class About extends React.Component {
               <div className='bioText'>
                 <span className='bioLine'>I am a Web Developer currently enrolled at <a className='lambdaLink' href='https://lambdaschool.com/courses/full-stack-web-development'><img className="lambda" src={lambda} />Lambda School</a>.</span>
                 <span className='bioLine'>I love to create something I can be proud of, to meet new people, and to learn new things.</span>
-                <span className='bioLine'>For me, this isn't just work... I enjoy the challenge that each project brings.</span>
+                <span className='bioLine'>For me, this isn't just work... I enjoy the challenges that each new project brings.</span>
               </div>
             </div>
           </div>
