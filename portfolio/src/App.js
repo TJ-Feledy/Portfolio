@@ -11,24 +11,26 @@ import Nav from './components/Nav.js'
 function App({ location }) {
 
   React.useEffect(() => {
-    window.CSS.registerProperty({
-      name: '--y',
-      syntax: '<length-percentage>',
-      initialValue: '20%',
-      inherits: true
-    })
-    window.CSS.registerProperty({
-      name: '--x',
-      syntax: '<length-percentage>',
-      initialValue: '20%',
-      inherits: true
-    })
+    if (window.CSS.registerProperty) {
+      window.CSS.registerProperty({
+        name: '--y',
+        syntax: '<length-percentage>',
+        initialValue: '20%',
+        inherits: true
+      })
+      window.CSS.registerProperty({
+        name: '--x',
+        syntax: '<length-percentage>',
+        initialValue: '20%',
+        inherits: true
+      })
+    }
   }, [])
-  console.log(window.location.pathname)
+  // console.log(window.location.pathname)
   return (
     <div className="App">
       {window.location.pathname !== '/' ? <Nav /> : null}
-      
+
       <TransitionGroup className='transitionGroup'>
         <CSSTransition 
           key={location.key} 
