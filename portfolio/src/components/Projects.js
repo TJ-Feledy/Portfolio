@@ -14,13 +14,13 @@ class Projects extends React.Component {
       <div className='Profile' id='Projects'>
         <h1 className='aboutHeader'>PROJECTS</h1>
         <div className='iconContainer'>
-        <i className="fas fa-wave-square fa-lg"></i>
+          <i className="fas fa-wave-square fa-lg"></i>
+        </div>
 
         <div className='projectsContainer'>
           <div className='projectWrapper'>
             <Project project={ffStartPage} />
           </div>
-        </div>
         </div>
       </div>
       )

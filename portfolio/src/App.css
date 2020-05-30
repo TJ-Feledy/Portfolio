@@ -732,3 +732,26 @@ body {
   margin-left: -4px;
   padding-right: 12px;
 }
+
+
+/*************************** Projects *******************************/
+
+
+.projectsContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.projectWrapper {
+  height: 20rem;
+  width: 20rem;
+}
+
+Project {
+  height: 100%;
+  width: 100%;
+}
+.projectImg {
+  height: 100%;
+  width: 100%;
+}
