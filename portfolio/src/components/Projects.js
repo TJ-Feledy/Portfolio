@@ -11,6 +11,12 @@ class Projects extends React.Component {
         <h1 className='aboutHeader'>PROJECTS</h1>
         <div className='iconContainer'>
         <i className="fas fa-wave-square fa-lg"></i>
+
+        <div className='projectsContainer'>
+          <div className='projectWrapper'>
+            
+          </div>
+        </div>
         </div>
       </div>
       )
