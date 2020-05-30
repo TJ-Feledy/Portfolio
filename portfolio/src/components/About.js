@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import me from '../images/me.jpg'
 import reduxImg from '../images/redux.png'
@@ -61,6 +62,7 @@ class About extends React.Component {
                 <span className='bioLine'>I am a Web Developer currently enrolled at <a className='lambdaLink' href='https://lambdaschool.com/courses/full-stack-web-development'><img className="lambda" src={lambda} alt='' />Lambda School</a>.</span>
                 <span className='bioLine'>I love to create something I can be proud of, to meet new people, and to learn new things.</span>
                 <span className='bioLine'>For me, this isn't just work... I enjoy the challenges that each new project brings.</span>
+                <span className='bioLine'><Link className='bioValues' to='/values'>Here are some of my values that I put into all of my work.</Link></span>
               </div>
             </div>
           </div>

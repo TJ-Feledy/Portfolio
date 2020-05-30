@@ -611,7 +611,17 @@ body {
   color: white;
 }
 .lambdaLink:hover {
-  text-shadow: 0 0px 22px rgb(255, 0, 0);
+  color: rgb(163, 0, 0);
+}
+.bioValues {
+  text-decoration: none;
+  color: white;
+  padding: 0 5px 0 5px;
+}
+.bioValues:hover {
+  box-sizing: border-box;
+  color: lightblue;
+
 }
 
 .techStack {
