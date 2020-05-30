@@ -6,7 +6,7 @@ function Nav() {
     <div className='Nav'>
       <Link to='/about' className='navLink'>about</Link>
       <Link to='/values' className='navLink'>values</Link>
-      <Link to='/' className='navLink'>projects</Link>
+      <Link to='/projects' className='navLink'>projects</Link>
     </div>
   )
 }
