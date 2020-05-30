@@ -2,7 +2,7 @@ import React from 'react'
 
 import Project from './Project'
 
-import ffStartPage from '../images/ffsp.png'
+import ffHomePage from '../images/ffhp.png'
 
 
 
@@ -19,7 +19,7 @@ class Projects extends React.Component {
 
         <div className='projectsContainer'>
           <div className='projectWrapper'>
-            <Project project={ffStartPage} />
+            <Project project={ffHomePage} />
           </div>
         </div>
       </div>
