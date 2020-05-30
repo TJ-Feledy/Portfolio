@@ -3,6 +3,8 @@ import React from 'react'
 
 
 
+
+
 class Project extends React.Component {
     constructor(props) {
         super(props)
@@ -12,10 +14,16 @@ class Project extends React.Component {
     }
 
     render() {
+
+        const {project} = this.state
+
         return (
             <div className='Project'>
-                
+                <img className='projectImg' src={project} alt='project' />
             </div>
         )
     }
 }
+
+
+export default Project
