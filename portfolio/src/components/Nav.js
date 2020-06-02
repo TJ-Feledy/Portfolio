@@ -9,7 +9,7 @@ function Nav(props) {
     if(props.location.pathname === '/values') {
       setTimeout(() => {
         setPoint(true)
-      }, 15000)
+      }, 20000)
     }
     else {
       setPoint(false)

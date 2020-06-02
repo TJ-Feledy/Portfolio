@@ -653,7 +653,7 @@ body {
   color: rgb(163, 0, 0);
 }
 .bioValues {
-  text-decoration: none;
+  text-decoration: underline;
   color: white;
   padding: 0 5px 0 5px;
 }
