@@ -425,6 +425,45 @@ body {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
+@keyframes bounce
+{
+    15%
+    {
+        transform: translateY(-6px);
+    }
+    30%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(-6px);
+    }
+    65%
+    {
+        transform: translateY(0px);
+    }
+    80%
+    {
+        transform: translateY(-6px);
+    }
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+.pointUp {
+  position: absolute;
+  top: 55px;
+  right: 28px;
+  font-size: 30px;
+  color: darkgreen;
+  z-index: 1;
+  animation: bounce 2s linear 0s infinite;
+}
+.projectLinkContainer {
+  position: relative;
+}
 
 /* ---------------------Profile----------------- */
 .routeSection {
