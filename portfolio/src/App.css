@@ -788,7 +788,7 @@ body {
 
 .projectsContainer {
   height: 100%;
-  width: 40rem;
+  width: auto;
   margin: 0 20px 0 20px;
   background-color: rgba(255, 255, 255, 0.144);
   display: flex;
@@ -801,7 +801,7 @@ body {
 
 .projectWrapper {
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   height: 100%;
