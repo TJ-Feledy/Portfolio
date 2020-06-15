@@ -9,7 +9,7 @@ const Count = require('./count-model.js')
 
 // Initialize count endpoint
 router.post('/initialize', (req, res) => {
-    const { counter } = req.body
+    const counter = req.body
     const count = {
         count: counter.count
     }
@@ -25,13 +25,14 @@ router.post('/initialize', (req, res) => {
 })
 
 // Update count endpoint
-router.put('/update', (req, res) => {
-    const { counter } = req.body
+router.put('/update/:id', (req, res) => {
+    const counter = req.body
+    const id = req.params
     const count = {
         count: counter.count
     }
 
-    Count.update(count)
+    Count.update(count, id)
         .then(newCount => {
             res.json(newCount)
         })
@@ -41,8 +42,9 @@ router.put('/update', (req, res) => {
 })
 
 // Get count endpoint
-router.get('/', (req, res) => {
-    Count.find()
+router.get('/:id', (req, res) => {
+    const { id } = req.params
+    Count.find(id)
         .then(count => {
             res.json(count)
         })
@@ -50,3 +52,7 @@ router.get('/', (req, res) => {
             res.status(500).json({ errorMessage: `${err}` })
         })
 })
+
+
+
+module.exports = router
