@@ -13,7 +13,7 @@ function find(id) {
 function initialize(count) {
     db('count').insert(count)
         .then(id => {
-            return find()
+            return find({ id: id[0] })
         })
 }
 
