@@ -7,16 +7,33 @@ module.exports = {
 }
 
 function find(id) {
-    return db('count').where({ id }).first()
+    if (id) {
+        console.log('find', id)
+        return db('count').where({ id }).first()
+    }else {
+        console.log('SHIT! No ID')
+        return {errorMessage: 'ID not found!'}
+    }
 }
 
 function initialize(count) {
-    db('count').insert(count)
-        .then(id => {
-            return find({ id: id[0] })
-        })
+    console.log('initialize', count.count)
+    if (count.count !== null) {
+        return db('count').insert(count)
+            .then(id => {
+                console.log('id', id)
+                return find(id[0])
+            })
+    }else {
+        console.log('initialize error')
+        return {errorMessage: 'No count given!!!'}
+    }
 }
 
 function update(count, id) {
-    return db('count').where({ id }).update(count)
+    return db('count').where({ id: id }).update(count)
+        .then(ids => {
+            console.log('id in update', id)
+            return find(id)
+        })
 }

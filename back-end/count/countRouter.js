@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const Count = require('./count-model.js')
+const Count = require('./count-model')
 
 
 
@@ -10,13 +10,11 @@ const Count = require('./count-model.js')
 // Initialize count endpoint
 router.post('/initialize', (req, res) => {
     const counter = req.body
-    const count = {
-        count: counter.count
-    }
 
-    Count.initialize(count)
+    console.log('counter', counter)
+    Count.initialize(counter)
         .then(count => {
-            res.status(201).json(`Initialized the counter! Starting at ${count}`)
+            res.status(201).json(`Initialized the counter! Starting at ${count.count}`)
         })
         .catch(err => {
             res.status(500).json({ errorMessage: 'Failed to initialize counter!' })
@@ -28,12 +26,11 @@ router.post('/initialize', (req, res) => {
 router.put('/update/:id', (req, res) => {
     const counter = req.body
     const id = req.params
-    const count = {
-        count: counter.count
-    }
+    console.log('params', counter, id)
 
-    Count.update(count, id)
+    Count.update(counter, id)
         .then(newCount => {
+            console.log('newCount', newCount)
             res.json(newCount)
         })
         .catch(err => {
@@ -42,7 +39,7 @@ router.put('/update/:id', (req, res) => {
 })
 
 // Get count endpoint
-router.get('/:id', (req, res) => {
+router.get('/', (req, res) => {
     const { id } = req.params
     Count.find(id)
         .then(count => {
