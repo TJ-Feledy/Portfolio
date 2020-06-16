@@ -4,7 +4,8 @@
   "description": "the server for my portfolio site",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "server": "nodemon"
   },
   "repository": {
     "type": "git",
