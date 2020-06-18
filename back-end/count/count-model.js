@@ -8,8 +8,8 @@ module.exports = {
 
 function find(id) {
     if (id) {
-        console.log('find', id)
-        return db('count').where({ id }).first()
+        return db('count').where({ id: id }).first()
+            
     }else {
         console.log('SHIT! No ID')
         return {errorMessage: 'ID not found!'}
@@ -30,10 +30,9 @@ function initialize(count) {
     }
 }
 
-function update(count, id) {
-    return db('count').where({ id: id }).update(count)
-        .then(ids => {
-            console.log('id in update', id)
+function update(count, count_id) {
+    return db('count').where({ id: count_id }).update(count)
+        .then(id => {
             return find(id)
         })
 }

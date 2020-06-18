@@ -25,13 +25,15 @@ router.post('/initialize', (req, res) => {
 // Update count endpoint
 router.put('/update/:id', (req, res) => {
     const counter = req.body
-    const id = req.params
+    const id = req.params.id
     console.log('params', counter, id)
 
     Count.update(counter, id)
         .then(newCount => {
-            console.log('newCount', newCount)
-            res.json(newCount)
+            Count.find(id)
+                .then(count => {
+                    res.json(count)
+                })
         })
         .catch(err => {
             res.status(500).json({ errorMessage: 'Failed to update Count' })
@@ -39,7 +41,7 @@ router.put('/update/:id', (req, res) => {
 })
 
 // Get count endpoint
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
     const { id } = req.params
     Count.find(id)
         .then(count => {
