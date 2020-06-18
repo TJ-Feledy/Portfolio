@@ -77,13 +77,13 @@ body {
 .home {
   height: 100vh;
   color: rgb(255, 255, 255);
-  text-shadow: 0 0 34px white;
+  text-shadow: 0 0 34px rgba(255, 255, 255, 0.705);
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   /* background-image: linear-gradient(rgb(43, 43, 43),silver 50%,rgb(43, 43, 43)); */
-  background-image: radial-gradient(ellipse at 50% 50%,rgb(49, 49, 49) 1%, rgb(49, 49, 49) 1%, rgb(0, 0, 0));
+  background-image: radial-gradient(ellipse at 50% 50%,rgb(49, 49, 49), rgb(0, 0, 0) 50%);
 }
 .hello {
   font-size: 35px;
@@ -125,7 +125,7 @@ body {
   text-shadow: none;
   color: black;
   background: rgb(255, 255, 255);
-  box-shadow: 0 0 74px white;
+  box-shadow: 0 0 74px rgba(255, 255, 255, 0.705);
   border: solid 2px rgb(233, 233, 233);
   border-radius: 5px;
   padding: .2rem .5rem;
@@ -425,6 +425,45 @@ body {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
+@keyframes bounce
+{
+    15%
+    {
+        transform: translateY(-6px);
+    }
+    30%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(-6px);
+    }
+    65%
+    {
+        transform: translateY(0px);
+    }
+    80%
+    {
+        transform: translateY(-6px);
+    }
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+.pointUp {
+  position: absolute;
+  top: 55px;
+  right: 28px;
+  font-size: 30px;
+  color: darkgreen;
+  z-index: 1;
+  animation: bounce 2s linear 0s infinite;
+}
+.projectLinkContainer {
+  position: relative;
+}
 
 /* ---------------------Profile----------------- */
 .routeSection {
@@ -611,7 +650,17 @@ body {
   color: white;
 }
 .lambdaLink:hover {
-  text-shadow: 0 0px 22px rgb(255, 0, 0);
+  color: rgb(163, 0, 0);
+}
+.bioValues {
+  text-decoration: underline;
+  color: white;
+  padding: 0 5px 0 5px;
+}
+.bioValues:hover {
+  box-sizing: border-box;
+  color: lightblue;
+
 }
 
 .techStack {
@@ -731,4 +780,42 @@ body {
   height: 42px;
   margin-left: -4px;
   padding-right: 12px;
+}
+
+
+/*************************** Projects *******************************/
+
+
+.projectsContainer {
+  height: 100%;
+  width: auto;
+  margin: 0 20px 0 20px;
+  background-color: rgba(255, 255, 255, 0.144);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 20px 2px white;
+  border-radius: 30px;
+}
+
+.projectWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 10px;
+}
+
+.Project {
+  margin: 1rem 1rem 1rem 1rem;
+  height: 17rem;
+  width: 17rem;
+}
+.projectImg {
+  height: 17rem;
+  width: 17rem;
+  border-radius: 10px;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import me from '../images/me.jpg'
 import reduxImg from '../images/redux.png'
@@ -27,7 +28,7 @@ class About extends React.Component {
                   <div className='languageContainer'>
                     <p className='techName'><i className="fab fa-js-square techIcon js" /> - JAVASCRIPT</p>
                     <p className='techName'><i className="fab fa-react techIcon" /> - REACT</p>
-                    <p className='techName'><img className="techIcon redux" src={reduxImg} /> - REDUX</p>
+                    <p className='techName'><img className="techIcon redux" src={reduxImg} alt='' /> - REDUX</p>
                     <p className='techName'><i className="fab fa-css3 techIcon" /> - CSS</p>
                     <p className='techName'><i className="fas fa-code techIcon html" /> - HTML</p>
                   </div>
@@ -39,8 +40,8 @@ class About extends React.Component {
                   <div className='languageContainer'>
                     <p className='techName'><i className="fab fa-node-js techIcon" /> - EXPRESS</p>
                     <p className='techName'><i className="fab fa-node-js techIcon" /> - NODE</p>
-                    <p className='techName'><img className="techIcon knex" src={knex} /> - KNEX</p>
-                    <p className='techName'><img className="techIcon sqlite" src={sqlite} /> - SQLITE3</p>
+                    <p className='techName'><img className="techIcon knex" src={knex} alt='' /> - KNEX</p>
+                    <p className='techName'><img className="techIcon sqlite" src={sqlite} alt='' /> - SQLITE3</p>
                     <p className='techName'><i className="fab fa-python techIcon py" /> - PYTHON</p>
                   </div>
                 </div>
@@ -58,9 +59,10 @@ class About extends React.Component {
             </div>
             <div className='bioTextContainer'>
               <div className='bioText'>
-                <span className='bioLine'>I am a Web Developer currently enrolled at <a className='lambdaLink' href='https://lambdaschool.com/courses/full-stack-web-development'><img className="lambda" src={lambda} />Lambda School</a>.</span>
+                <span className='bioLine'>I am a Web Developer currently enrolled at <a className='lambdaLink' href='https://lambdaschool.com/courses/full-stack-web-development'><img className="lambda" src={lambda} alt='' />Lambda School</a>.</span>
                 <span className='bioLine'>I love to create something I can be proud of, to meet new people, and to learn new things.</span>
                 <span className='bioLine'>For me, this isn't just work... I enjoy the challenges that each new project brings.</span>
+                <span className='bioLine'><Link className='bioValues' to='/values'>Here are some values that I put into all of my work.</Link></span>
               </div>
             </div>
           </div>

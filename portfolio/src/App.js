@@ -7,6 +7,7 @@ import Home from './components/Home.js'
 import Values from './components/Values.js'
 import About from './components/About.js'
 import Nav from './components/Nav.js'
+import Projects from './components/Projects';
 
 function App({ location }) {
 
@@ -42,6 +43,7 @@ function App({ location }) {
               <Route exact path='/' render={props => <Home {...props} /> } />
               <Route path='/about' render={props => <About {...props} /> } />
               <Route path='/values' render={props => <Values {...props} /> } />
+              <Route path='/projects' render={props => <Projects {...props} /> } />
             </Switch>
           </section>
         </CSSTransition>
