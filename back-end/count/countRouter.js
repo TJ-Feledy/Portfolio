@@ -14,7 +14,7 @@ router.post('/initialize', (req, res) => {
     console.log('counter', counter)
     Count.initialize(counter)
         .then(count => {
-            res.status(201).json(`Initialized the counter! Starting at ${count.count}`)
+            res.status(201).json(count)
         })
         .catch(err => {
             res.status(500).json({ errorMessage: 'Failed to initialize counter!' })
