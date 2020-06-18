@@ -77,13 +77,13 @@ body {
 .home {
   height: 100vh;
   color: rgb(255, 255, 255);
-  text-shadow: 0 0 34px white;
+  text-shadow: 0 0 34px rgba(255, 255, 255, 0.705);
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   /* background-image: linear-gradient(rgb(43, 43, 43),silver 50%,rgb(43, 43, 43)); */
-  background-image: radial-gradient(ellipse at 50% 50%,rgb(49, 49, 49) 1%, rgb(49, 49, 49) 1%, rgb(0, 0, 0));
+  background-image: radial-gradient(ellipse at 50% 50%,rgb(49, 49, 49), rgb(0, 0, 0) 50%);
 }
 .hello {
   font-size: 35px;
@@ -125,7 +125,7 @@ body {
   text-shadow: none;
   color: black;
   background: rgb(255, 255, 255);
-  box-shadow: 0 0 74px white;
+  box-shadow: 0 0 74px rgba(255, 255, 255, 0.705);
   border: solid 2px rgb(233, 233, 233);
   border-radius: 5px;
   padding: .2rem .5rem;
