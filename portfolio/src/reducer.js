@@ -17,8 +17,30 @@ const initialState = {
     counter: {}
 }
 
-// export default function(state=initialState, action) {
-//   switch (action.type) {
-//     case 
-//   }
-// }
+export default function(state=initialState, action) {
+  switch (action.type) {
+    case INITIALIZE_COUNT_START: {
+        return {
+            ...state,
+            isLoading: true
+        }
+    }
+    case INITIALIZE_COUNT_SUCCESS: {
+        console.log(action.payload)
+        return {
+            ...state,
+            isLoading: false,
+            error: null,
+            counter: action.payload
+        }
+    }
+    case INITIALIZE_COUNT_FAILED: {
+        console.log(action.payload)
+        return {
+            ...state,
+            error: action.payload,
+            isLoading: false
+        }
+    }
+  }
+}
