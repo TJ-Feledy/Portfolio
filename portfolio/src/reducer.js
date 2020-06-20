@@ -42,5 +42,51 @@ export default function(state=initialState, action) {
             isLoading: false
         }
     }
+    case UPDATE_COUNT_START: {
+        return {
+            ...state,
+            isLoading: true
+        }
+    }
+    case UPDATE_COUNT_SUCCESS: {
+        console.log(action.payload)
+        return {
+            ...state,
+            isLoading: false,
+            error: null,
+            counter: action.payload
+        }
+    }
+    case UPDATE_COUNT_FAILED: {
+        console.log(action.payload)
+        return {
+            ...state,
+            error: action.payload,
+            isLoading: false
+        }
+    }
+    case GET_COUNT_START: {
+        return {
+            ...state,
+            isLoading: true
+        }
+    }
+    case GET_COUNT_SUCCESS: {
+        console.log(action.payload)
+        return {
+            ...state,
+            isLoading: false,
+            error: null,
+            counter: action.payload
+        }
+    }
+    case GET_COUNT_FAILED: {
+        console.log(action.payload)
+        return {
+            ...state,
+            error: action.payload,
+            isLoading: false
+        }
+    }
   }
 }
