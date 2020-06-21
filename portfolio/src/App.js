@@ -50,7 +50,7 @@ function App({ location }, props) {
           </section>
         </CSSTransition>
       </TransitionGroup>
-      <Counter />
+      {window.location.pathname !== '/' ? <Counter /> : null}
     </div>
   );
 }
