@@ -1,7 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux'
+import { updateCount } from '../actions.js'
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      counter: this.props.counter
+    }
+  }
+
+
+  clickHandler = evt => {
+    let newCounter = {
+      ...this.state.counter,
+      count: this.state.counter.count++
+    }
+    const id = newCounter.id
+    
+    this.props.updateCount(newCounter, id)
+  }
+
   render() {
     return (
       <div className="home">
@@ -19,4 +39,12 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  counter: state.counter
+})
+
+const mapDispatchToProps = {
+  updateCount
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Home);
