@@ -11,7 +11,8 @@ class Counter extends React.Component {
         }
     }
 
-    componentDidMount {
+    componentDidMount() {
+
         this.setState({
             counter: this.props.counter
         })

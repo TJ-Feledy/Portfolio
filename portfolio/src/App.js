@@ -7,7 +7,9 @@ import Home from './components/Home.js'
 import Values from './components/Values.js'
 import About from './components/About.js'
 import Nav from './components/Nav.js'
-import Projects from './components/Projects';
+import Projects from './components/Projects'
+import { getCount } from './actions.js'
+import { connect } from 'react-redux'
 
 function App({ location }) {
 
@@ -26,6 +28,8 @@ function App({ location }) {
         inherits: true
       })
     }
+
+    this.props.getCount(22)
   }, [])
   // console.log(window.location.pathname)
   return (
@@ -52,4 +56,8 @@ function App({ location }) {
   );
 }
 
-export default withRouter(App);
+const mapDispatchToProps = {
+  getCount
+}
+
+export default withRouter(connect(null, mapDispatchToProps)(App));
