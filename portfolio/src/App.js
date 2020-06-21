@@ -7,9 +7,10 @@ import Home from './components/Home.js'
 import Values from './components/Values.js'
 import About from './components/About.js'
 import Nav from './components/Nav.js'
-import Projects from './components/Projects';
+import Projects from './components/Projects.js'
+import Counter from './components/Counter.js'
 
-function App({ location }) {
+function App({ location }, props) {
 
   React.useEffect(() => {
     if (window.CSS.registerProperty) {
@@ -27,6 +28,7 @@ function App({ location }) {
       })
     }
   }, [])
+
   // console.log(window.location.pathname)
   return (
     <div className="App">
@@ -48,8 +50,11 @@ function App({ location }) {
           </section>
         </CSSTransition>
       </TransitionGroup>
+      <Counter />
     </div>
   );
 }
+
+
 
 export default withRouter(App);
