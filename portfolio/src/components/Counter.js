@@ -26,7 +26,8 @@ class Counter extends React.Component {
         return (
             <div className='Counter'>
                 <div className='eyeContainer'><i className="eye far fa-eye"></i></div>
-                <p className='count'>this.state.counter.count</p>
+                <p className='count'>{this.state.counter.count}</p>
+                <p className='countPopup'>My Portfolio has been viewed {this.state.counter.count} times.</p>
             </div>
         )
     }

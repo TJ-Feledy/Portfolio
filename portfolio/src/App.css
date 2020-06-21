@@ -43,6 +43,40 @@ body {
   text-transform: uppercase;
 }
 
+.Counter {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.185);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 8px;
+}
+.eye {
+  color: black;
+  margin: 0 5px 0 10px;
+}
+.count {
+  font-weight: bolder;
+  margin: 0 10px 0 5px;
+}
+.countPopup {
+  visibility: hidden;
+  position: absolute;
+  top: -65px;
+  left: 60px;
+  background-color: white;
+  color: black;
+  display: flex;
+  width: 150px;
+  font-weight: bolder;
+  border-radius: 8px 8px 8px 0px;
+}
+.Counter:hover .countPopup {
+  visibility: visible;
+}
+
 .App {
   text-align: center;
 }
