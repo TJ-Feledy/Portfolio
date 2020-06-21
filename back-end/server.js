@@ -1,5 +1,7 @@
 const express = require('express')
 
+const cors = require('cors')
+
 require('dotenv').config()
 
 const countRouter = require('./count/countRouter')
@@ -7,6 +9,8 @@ const countRouter = require('./count/countRouter')
 const server = express()
 
 server.use(express.json())
+
+server.use(cors())
 
 server.use('/api/count', countRouter)
 
