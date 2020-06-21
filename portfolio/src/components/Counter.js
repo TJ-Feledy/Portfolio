@@ -15,12 +15,12 @@ class Counter extends React.Component {
     componentDidMount() {
         this.props.getCount(22)
             .then(res => {
-                console.log(res)
                 this.setState({
                     counter: this.props.counter
-                })
+                }, () => {console.log(this.state.counter.count)})
             })
     }
+
 
     render() {
         return (

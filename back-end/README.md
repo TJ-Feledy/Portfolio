@@ -1,8 +1,11 @@
 BackEnd built using Node.js, express, and knex.js.
 
+## Deploy
+ - Deployed to heroku at: https://tjs-portfolio.herokuapp.com/
+
 ## Endpoints
 
-**** All endpoints start with:  heroku deploy ****
+**** All endpoints start with:  https://tjs-portfolio.herokuapp.com/api/count ****
 
     - Initialize the counter:
         POST to '/initialize'
