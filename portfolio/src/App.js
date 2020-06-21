@@ -28,9 +28,11 @@ function App({ location }) {
         inherits: true
       })
     }
-
-    this.props.getCount(22)
   }, [])
+
+  React.useEffect(() => {
+    this.props.getCount(22)
+  })
   // console.log(window.location.pathname)
   return (
     <div className="App">
