@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { getCount } from '../actions.js'
 
 
 
@@ -7,15 +8,18 @@ class Counter extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            counter = {}
+            counter: {}
         }
     }
 
     componentDidMount() {
-
-        this.setState({
-            counter: this.props.counter
-        })
+        this.props.getCount(22)
+            .then(res => {
+                console.log(res)
+                this.setState({
+                    counter: this.props.counter
+                })
+            })
     }
 
     render() {
@@ -33,4 +37,4 @@ const mapStateToProps = state => ({
     isLoading: state.isLoading
 })
 
-export default connect(mapStateToProps)(Counter)
+export default connect(mapStateToProps,{getCount})(Counter)

@@ -7,11 +7,10 @@ import Home from './components/Home.js'
 import Values from './components/Values.js'
 import About from './components/About.js'
 import Nav from './components/Nav.js'
-import Projects from './components/Projects'
-import { getCount } from './actions.js'
-import { connect } from 'react-redux'
+import Projects from './components/Projects.js'
+import Counter from './components/Counter.js'
 
-function App({ location }) {
+function App({ location }, props) {
 
   React.useEffect(() => {
     if (window.CSS.registerProperty) {
@@ -30,9 +29,6 @@ function App({ location }) {
     }
   }, [])
 
-  React.useEffect(() => {
-    this.props.getCount(22)
-  })
   // console.log(window.location.pathname)
   return (
     <div className="App">
@@ -54,12 +50,11 @@ function App({ location }) {
           </section>
         </CSSTransition>
       </TransitionGroup>
+      <Counter />
     </div>
   );
 }
 
-const mapDispatchToProps = {
-  getCount
-}
 
-export default withRouter(connect(null, mapDispatchToProps)(App));
+
+export default withRouter(App);
