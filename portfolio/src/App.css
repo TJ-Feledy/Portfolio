@@ -854,3 +854,32 @@ body {
   width: 17rem;
   border-radius: 10px;
 }
+.hoverContainer {
+  margin: 1rem 1rem 1rem 1rem;
+  height: 17rem;
+  width: 17rem;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hoveredProject {
+  padding: 1rem;
+}
+.projectName {
+  margin: 0;
+}
+.projectDate {
+  margin: 0;
+}
+.gitIcon {
+  font-size: larger;
+}
+.repoLink {
+  text-decoration: none;
+}
+.repoLink:hover {
+  text-decoration: underline;
+}
