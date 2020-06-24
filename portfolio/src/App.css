@@ -878,6 +878,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: fade .5s ease-in-out;
   border-bottom: 1px solid black;
 }
 .projectName {
@@ -891,6 +892,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  animation: fade 1s ease-in;
 }
 .projectStackElement {
   margin-bottom: 10px;
@@ -899,9 +901,13 @@ body {
 }
 .projectDescription {
   font-weight: bold;
+  animation: fade 2s ease-in;
 }
 .gitIcon {
   font-size: larger;
+}
+.gitDiv {
+  animation: fade 3.5s linear;
 }
 .repoLink {
   text-decoration: none;
