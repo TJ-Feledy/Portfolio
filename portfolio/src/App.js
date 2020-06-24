@@ -2,13 +2,14 @@ import React from 'react';
 import './App.css';
 import { Route, Switch, withRouter } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { getCount } from './actions.js'
+import { connect } from 'react-redux'
 
 import Home from './components/Home.js'
 import Values from './components/Values.js'
 import About from './components/About.js'
 import Nav from './components/Nav.js'
 import Projects from './components/Projects.js'
-import Counter from './components/Counter.js'
 
 function App({ location }, props) {
 
@@ -29,7 +30,12 @@ function App({ location }, props) {
     }
   }, [])
 
+  React.useEffect(() => {
+    getCount(15)
+  },[])
+
   // console.log(window.location.pathname)
+
   return (
     <div className="App">
       {window.location.pathname !== '/' ? <Nav /> : null}
@@ -50,11 +56,10 @@ function App({ location }, props) {
           </section>
         </CSSTransition>
       </TransitionGroup>
-      {window.location.pathname !== '/' ? <Counter /> : null}
     </div>
   );
 }
 
 
 
-export default withRouter(App);
+export default withRouter(connect(null,{getCount})(App));

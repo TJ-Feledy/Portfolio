@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Counter from './Counter.js'
 
 class Values extends React.Component {
 
@@ -44,6 +44,7 @@ class Values extends React.Component {
           </div>
           <div className='aboutBackground'/>
         </div>
+        <Counter />
       </>
     )
   }

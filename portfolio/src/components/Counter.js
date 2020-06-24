@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getCount } from '../actions.js'
+import { withRouter } from 'react-router-dom'
 
 
 
@@ -13,11 +14,14 @@ class Counter extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getCount(22)
+        this.props.getCount(15)
             .then(res => {
-                this.setState({
-                    counter: this.props.counter
-                }, () => {console.log(this.state.counter.count)})
+                setTimeout( () => {
+
+                    this.setState({
+                        counter: this.props.counter
+                    }, () => {console.log(this.state.counter.count)})
+                }, 200)
             })
     }
 
@@ -38,4 +42,4 @@ const mapStateToProps = state => ({
     isLoading: state.isLoading
 })
 
-export default connect(mapStateToProps,{getCount})(Counter)
+export default withRouter(connect(mapStateToProps,{getCount})(Counter))

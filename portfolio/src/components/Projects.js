@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Project from './Project'
+import Counter from './Counter.js'
 
 import ffHomePage from '../images/ffhp.png'
 import g2itHome from '../images/g2ihome.png'
@@ -24,6 +25,7 @@ class Projects extends React.Component {
             <Project project={g2itHome} />
           </div>
         </div>
+        <Counter />
       </div>
       )
   }
