@@ -32,7 +32,7 @@ export function updateCount(payload, id) {
     return (dispatch) => {
         dispatch({ type: UPDATE_COUNT_START })
 
-        return axios.post(`https://tjs-portfolio.herokuapp.com/api/count/update/${id}`, payload)
+        return axios.put(`https://tjs-portfolio.herokuapp.com/api/count/update/${id}`, payload)
             .then(res => {
                 dispatch({ type: UPDATE_COUNT_SUCCESS, payload: payload, id: id })
             })

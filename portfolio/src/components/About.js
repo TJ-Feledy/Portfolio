@@ -6,6 +6,7 @@ import reduxImg from '../images/redux.png'
 import lambda from '../images/lambda-logo.png'
 import sqlite from '../images/sqlite.png'
 import knex from '../images/knex.png'
+import Counter from './Counter.js'
 
 
 class About extends React.Component {
@@ -67,6 +68,7 @@ class About extends React.Component {
             </div>
           </div>
         </div>
+        <Counter />
       </div>
     )
   }
