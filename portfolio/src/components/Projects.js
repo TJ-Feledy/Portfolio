@@ -36,15 +36,23 @@ class Projects extends React.Component {
 
         <div className='projectsContainer'>
           <div className='projectWrapper'>
-            <div className='hoverContainer' onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+            <div onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
               {
                 this.state.hover ?
-                <div className='hoveredProject'>
-                  <div className='ffHovered'>
-                    <h2 className='projectName'>FoodieFun</h2>
-                    <h3 className='projectDate'>July 2019</h3>
-                    <p className='projectDescription'>This was my very first Front-End project, using React, that I created on my own. It was built as a build-week project for Lambda School.</p>
-                    <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/tree/TJ-Feledy'>https://github.com/build-week-foodiefun/Front-End/tree/TJ-Feledy</a></div>
+                <div className='hoverContainer'>
+                  <div className='hoveredProject'>
+                    <div className='ffHovered'>
+                      <div className='projectHead'>
+                        <h2 className='projectName'>FoodieFun</h2>
+                        <h3 className='projectDate'>July 2019</h3>
+                      </div>
+                      <div className='projectStack'>
+                        <p className='projectStackElement'>React</p>
+                        <p className='projectStackElement'>Redux</p>
+                      </div>
+                      <p className='projectDescription'>This was my very first Front-End project, that I created on my own. It was built as a build-week project for Lambda School.</p>
+                      <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/tree/TJ-Feledy'>https://github.com/build-week-foodiefun/Front-End/tree/TJ-Feledy</a></div>
+                    </div>
                   </div>
                 </div>
                 : <Project project={ffHomePage}/>
