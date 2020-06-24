@@ -51,7 +51,7 @@ class Projects extends React.Component {
                         <p className='projectStackElement'>Redux</p>
                       </div>
                       <p className='projectDescription'>This was my very first Front-End project that I created on my own. It was built as a one week project for Lambda School.</p>
-                      <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/tree/TJ-Feledy'>https://github.com/build-week-foodiefun/Front-End/tree/TJ-Feledy</a></div>
+                      <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/'>https://github.com/build-week-foodiefun/Front-End/</a></div>
                     </div>
                   </div>
                 </div>

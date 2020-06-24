@@ -895,7 +895,8 @@ body {
   animation: fade 1s ease-in;
 }
 .projectStackElement {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  margin-top: 24px;
   color: rgb(0, 132, 255);
   font-weight: bolder;
 }
