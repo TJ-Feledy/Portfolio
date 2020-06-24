@@ -12,7 +12,7 @@ class Home extends React.Component {
   }
   
   componentDidMount() {
-    this.props.getCount(15)
+    this.props.getCount(1)
         .then(res => {
             this.setState({
                 counter: this.props.counter

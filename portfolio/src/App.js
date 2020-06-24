@@ -31,7 +31,7 @@ function App({ location }, props) {
   }, [])
 
   React.useEffect(() => {
-    getCount(15)
+    getCount(1)
   },[])
 
   // console.log(window.location.pathname)

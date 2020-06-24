@@ -14,7 +14,7 @@ class Counter extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getCount(15)
+        this.props.getCount(1)
             .then(res => {
                 setTimeout( () => {
 
