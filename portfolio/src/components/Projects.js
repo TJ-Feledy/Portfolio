@@ -14,13 +14,19 @@ class Projects extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      hover: false
+      hover1: false,
+      hover2: false,
     }
   }
 
-  toggleHover = () => {
+  toggleHover1 = () => {
     this.setState(prevState => ({
-      hover: !prevState.hover
+      hover1: !prevState.hover1
+    }))
+  }
+  toggleHover2 = () => {
+    this.setState(prevState => ({
+      hover2: !prevState.hover2
     }))
   }
 
@@ -36,9 +42,9 @@ class Projects extends React.Component {
 
         <div className='projectsContainer'>
           <div className='projectWrapper'>
-            <div onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+            <div onMouseEnter={this.toggleHover1} onMouseLeave={this.toggleHover1}>
               {
-                this.state.hover ?
+                this.state.hover1 ?
                 <div className='hoverContainer'>
                   <div className='hoveredProject'>
                     <div className='ffHovered'>
@@ -58,7 +64,28 @@ class Projects extends React.Component {
                 : <Project project={ffHomePage}/>
               }
             </div>
-            <Project project={g2itHome} />
+            <div onMouseEnter={this.toggleHover2} onMouseLeave={this.toggleHover2}>
+              {
+                this.state.hover2 ?
+                <div className='hoverContainer'>
+                  <div className='hoveredProject'>
+                    <div className='ffHovered'>
+                      <div className='projectHead'>
+                        <h2 className='projectName'>FoodieFun</h2>
+                        <h3 className='projectDate'>July 2019</h3>
+                      </div>
+                      <div className='projectStack'>
+                        <p className='projectStackElement'>React</p>
+                        <p className='projectStackElement'>Redux</p>
+                      </div>
+                      <p className='projectDescription'>This was my very first Front-End project that I created on my own. It was built as a one week project for Lambda School.</p>
+                      <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/'>https://github.com/build-week-foodiefun/Front-End/</a></div>
+                    </div>
+                  </div>
+                </div>
+                : <Project project={g2itHome} />
+              }
+            </div>
           </div>
         </div>
         <Counter />
