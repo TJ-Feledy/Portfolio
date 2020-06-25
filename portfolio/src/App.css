@@ -917,6 +917,7 @@ body {
   margin-bottom: 5px;
   animation: fade 3.5s linear;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
 }
 .deployLink {

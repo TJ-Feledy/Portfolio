@@ -79,7 +79,7 @@ class Projects extends React.Component {
                         <p className='projectStackElement'>Redux</p>
                       </div>
                       <p className='projectDescription'>I was part of a 3 person team on the Front-End portion of this todo app. Some features include: Create tasks, edit tasks, delete tasks, mark tasks as completed, and in-app notifications.</p>
-                      <p className='deployedTo'>Check it out here: <a className='deployLink' href="get2it.netlify.app">get2it.netlify.app</a></p>
+                      <p className='deployedTo'><i className="far pointRight fa-hand-point-right"></i>Check it out here: <a className='deployLink' href="get2it.netlify.app">get2it.netlify.app</a></p>
                       <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/TJ-Feledy/Get2It'>https://github.com/TJ-Feledy/Get2It</a></div>
                     </div>
                   </div>
