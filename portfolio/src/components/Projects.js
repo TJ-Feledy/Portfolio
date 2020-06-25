@@ -56,7 +56,7 @@ class Projects extends React.Component {
                         <p className='projectStackElement'>React</p>
                         <p className='projectStackElement'>Redux</p>
                       </div>
-                      <p className='projectDescription'>This was my very first Front-End project that I created on my own. It was built as a one week project for Lambda School.</p>
+                      <p className='projectDescription'>This was my very first Front-End project that I created on my own. It was built as a one week project for Lambda School. Some features include: Add, update, delete, or rate a meal. Filter meals by catigory or rating.</p>
                       <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/'>https://github.com/build-week-foodiefun/Front-End/</a></div>
                     </div>
                   </div>
@@ -71,15 +71,16 @@ class Projects extends React.Component {
                   <div className='hoveredProject'>
                     <div className='ffHovered'>
                       <div className='projectHead'>
-                        <h2 className='projectName'>FoodieFun</h2>
-                        <h3 className='projectDate'>July 2019</h3>
+                        <h2 className='projectName'>Get2It</h2>
+                        <h3 className='projectDate'>Dec 2019 - Jan 2020</h3>
                       </div>
                       <div className='projectStack'>
                         <p className='projectStackElement'>React</p>
                         <p className='projectStackElement'>Redux</p>
                       </div>
-                      <p className='projectDescription'>This was my very first Front-End project that I created on my own. It was built as a one week project for Lambda School.</p>
-                      <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/'>https://github.com/build-week-foodiefun/Front-End/</a></div>
+                      <p className='projectDescription'>I was part of a 3 person team on the Front-End portion of this todo app. Some features include: Create tasks, edit tasks, delete tasks, mark tasks as completed, and in-app notifications.</p>
+                      <p className='deployedTo'>Check it out here: <a className='deployLink' href="get2it.netlify.app">get2it.netlify.app</a></p>
+                      <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/TJ-Feledy/Get2It'>https://github.com/TJ-Feledy/Get2It</a></div>
                     </div>
                   </div>
                 </div>
