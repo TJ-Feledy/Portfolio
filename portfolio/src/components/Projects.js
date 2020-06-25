@@ -11,6 +11,21 @@ import g2itHome from '../images/g2ihome.png'
 
 
 class Projects extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      hover: false
+    }
+  }
+
+  toggleHover = () => {
+    this.setState(prevState => ({
+      hover: !prevState.hover
+    }))
+  }
+
+
+
   render() {
     return (
       <div className='Profile' id='Projects'>
@@ -21,7 +36,28 @@ class Projects extends React.Component {
 
         <div className='projectsContainer'>
           <div className='projectWrapper'>
-            <Project project={ffHomePage} />
+            <div onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+              {
+                this.state.hover ?
+                <div className='hoverContainer'>
+                  <div className='hoveredProject'>
+                    <div className='ffHovered'>
+                      <div className='projectHead'>
+                        <h2 className='projectName'>FoodieFun</h2>
+                        <h3 className='projectDate'>July 2019</h3>
+                      </div>
+                      <div className='projectStack'>
+                        <p className='projectStackElement'>React</p>
+                        <p className='projectStackElement'>Redux</p>
+                      </div>
+                      <p className='projectDescription'>This was my very first Front-End project that I created on my own. It was built as a one week project for Lambda School.</p>
+                      <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/'>https://github.com/build-week-foodiefun/Front-End/</a></div>
+                    </div>
+                  </div>
+                </div>
+                : <Project project={ffHomePage}/>
+              }
+            </div>
             <Project project={g2itHome} />
           </div>
         </div>
