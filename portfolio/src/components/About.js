@@ -7,6 +7,7 @@ import lambda from '../images/lambda-logo.png'
 import sqlite from '../images/sqlite.png'
 import knex from '../images/knex.png'
 import Counter from './Counter.js'
+import NetworkLinks from './NetworkLinks'
 
 
 class About extends React.Component {
@@ -59,16 +60,27 @@ class About extends React.Component {
               </div>
             </div>
             <div className='bioTextContainer'>
+              <p className='bioName'>Theodore J. Feledy</p>
               <div className='bioText'>
                 <span className='bioLine'>I am a Web Developer currently enrolled at <a className='lambdaLink' href='https://lambdaschool.com/courses/full-stack-web-development'><img className="lambda" src={lambda} alt='' />Lambda School</a>.</span>
                 <span className='bioLine'>I love to create something I can be proud of, to meet new people, and to learn new things.</span>
                 <span className='bioLine'>For me, this isn't just work... I enjoy the challenges that each new project brings.</span>
-                <span className='bioLine'><Link className='bioValues' to='/values'>Here are some values that I put into all of my work.</Link></span>
+              </div>
+              <div className='bioLinks'>
+                <div className='bioLink'>
+                  <i className="far bioPointRight fa-hand-point-right"></i>
+                  <span className='bioLineLink'><Link className='bioValues' to='/values'>Here are some values that I put into all of my work.</Link></span>
+                </div>
+                <div className='bioLink'>
+                  <i className="far bioPointRight fa-hand-point-right"></i>
+                  <span className='bioLineLink'><Link className='bioContact' to='/contact'>If you would like to contact me, you can do that here.</Link></span>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <Counter />
+        <NetworkLinks />
       </div>
     )
   }

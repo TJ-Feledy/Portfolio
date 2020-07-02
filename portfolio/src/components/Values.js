@@ -1,5 +1,6 @@
 import React from 'react'
 import Counter from './Counter.js'
+import NetworkLinks from './NetworkLinks.js'
 
 class Values extends React.Component {
 
@@ -45,6 +46,7 @@ class Values extends React.Component {
           <div className='aboutBackground'/>
         </div>
         <Counter />
+        <NetworkLinks />
       </>
     )
   }

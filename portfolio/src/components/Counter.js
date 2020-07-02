@@ -21,7 +21,7 @@ class Counter extends React.Component {
                     this.setState({
                         counter: this.props.counter
                     }, () => {console.log(this.state.counter.count)})
-                }, 200)
+                }, 300)
             })
     }
 
