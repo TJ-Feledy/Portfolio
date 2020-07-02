@@ -737,6 +737,32 @@ body {
 
 }
 
+.networksContainer {
+  position: fixed;
+  bottom: 5px;
+  left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 145px;
+  font-size: 18px;
+  z-index: 1;
+}
+.myGitLink {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.103);
+}
+.myGitLink:hover {
+  color: rgba(255, 255, 255, 0.281);
+}
+.myLinkedInLink {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.103);
+}
+.myLinkedInLink:hover {
+  color: rgba(255, 255, 255, 0.281);
+}
+
 .techStack {
   width: auto;
   display: flex;

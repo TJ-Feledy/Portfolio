@@ -7,6 +7,7 @@ import lambda from '../images/lambda-logo.png'
 import sqlite from '../images/sqlite.png'
 import knex from '../images/knex.png'
 import Counter from './Counter.js'
+import NetworkLinks from './NetworkLinks'
 
 
 class About extends React.Component {
@@ -79,6 +80,7 @@ class About extends React.Component {
           </div>
         </div>
         <Counter />
+        <NetworkLinks />
       </div>
     )
   }
