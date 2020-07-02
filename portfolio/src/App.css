@@ -669,13 +669,19 @@ body {
   flex-flow: column;
   align-items: center;
 }
+.bioName {
+  animation: fade2 5.5s linear;
+  margin: 15px 0 0 0;
+  text-decoration: underline;
+  text-decoration-color: rgb(119, 174, 255);
+}
 .bioText {
   padding: 20px 10px;
   animation: fade2 6s linear;
   text-shadow: 0 0 14px rgb(155, 155, 155);
 }
 .bioLinks {
-  animation: fade2 7s linear;
+  animation: fade2 6.5s linear;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -711,6 +717,7 @@ body {
 }
 .bioValues {
   text-decoration: underline;
+  text-decoration-color: white;
   color: rgb(119, 174, 255);
   padding: 0 5px 0 5px;
 }
@@ -721,8 +728,8 @@ body {
 }
 .bioContact {
   text-decoration: underline;
-  color: rgb(119, 174, 255);
-  padding: 0 5px 0 5px;
+  text-decoration-color: white;
+  color: rgb(119, 174, 255);  padding: 0 5px 0 5px;
 }
 .bioContact:hover {
   box-sizing: border-box;

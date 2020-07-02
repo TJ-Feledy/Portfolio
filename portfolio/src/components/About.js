@@ -59,6 +59,7 @@ class About extends React.Component {
               </div>
             </div>
             <div className='bioTextContainer'>
+              <p className='bioName'>Theodore J. Feledy</p>
               <div className='bioText'>
                 <span className='bioLine'>I am a Web Developer currently enrolled at <a className='lambdaLink' href='https://lambdaschool.com/courses/full-stack-web-development'><img className="lambda" src={lambda} alt='' />Lambda School</a>.</span>
                 <span className='bioLine'>I love to create something I can be proud of, to meet new people, and to learn new things.</span>
