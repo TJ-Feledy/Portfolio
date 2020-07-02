@@ -665,15 +665,36 @@ body {
 }
 .bioTextContainer {
   width: 100%;
-  /* padding: 0 20px; */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 .bioText {
   padding: 20px 10px;
   animation: fade2 6s linear;
   text-shadow: 0 0 14px rgb(155, 155, 155);
 }
+.bioLinks {
+  animation: fade2 7s linear;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.bioLink {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+}
 .bioLine {
   padding-left: 15px;
+}
+.bioLineLink {
+  width: 100%;
+  margin-left: 10px;
+  font-size: 22px;
+  color: rgb(119, 174, 255);
 }
 .lambda {
   height: 17px;
@@ -690,10 +711,20 @@ body {
 }
 .bioValues {
   text-decoration: underline;
-  color: white;
+  color: rgb(119, 174, 255);
   padding: 0 5px 0 5px;
 }
 .bioValues:hover {
+  box-sizing: border-box;
+  color: lightblue;
+
+}
+.bioContact {
+  text-decoration: underline;
+  color: rgb(119, 174, 255);
+  padding: 0 5px 0 5px;
+}
+.bioContact:hover {
   box-sizing: border-box;
   color: lightblue;
 
