@@ -770,6 +770,22 @@ body {
   color: rgba(255, 255, 255, 0.281);
 }
 
+.Resume {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 50px;
+}
+.pdfPageNums {
+  color: white;
+  margin: 0px;
+  position: absolute;
+  bottom: 80px;
+}
+
 .techStack {
   width: auto;
   display: flex;
