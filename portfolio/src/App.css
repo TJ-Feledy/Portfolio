@@ -778,12 +778,37 @@ body {
   align-items: center;
   height: 100%;
   margin-top: 50px;
+  animation: fade 2s ease-in-out;
+}
+canvas {
+  opacity: .9;
+  border-radius: 18px;
+  box-shadow: 0 0 30px 10px white;
 }
 .pdfPageNums {
   color: white;
   margin: 0px;
   position: absolute;
   bottom: 80px;
+}
+.resumeDownloadForm {
+  animation: fade 3s ease-in-out;
+  position: fixed;
+  left: 50%;
+  top: 170px;
+  margin-left: -100px;
+}
+.downloadButton {
+  width: 200px;
+  height: 45px;
+  background-color: black;
+  color: white;
+  border-radius: 18px;
+  opacity: .3;
+  outline: none;
+}
+.downloadButton:hover {
+  opacity: 1;
 }
 
 .techStack {

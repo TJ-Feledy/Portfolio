@@ -3,6 +3,8 @@ import React from 'react'
 import { Document, Page, pdfjs } from "react-pdf";
 
 import myResume from '../resources/resume.pdf'
+import NetworkLinks from './NetworkLinks.js'
+import Counter from './Counter.js'
 
 class Resume extends React.Component {
     constructor(props) {
@@ -27,6 +29,11 @@ class Resume extends React.Component {
                     <Page pageNumber={pageNumber} />
                 </Document>
                 <p className='pdfPageNums'>Page {pageNumber} of {numPages}</p>
+                <form className='resumeDownloadForm' method='get' action={myResume}>
+                    <button className='downloadButton'>Download PDF Version Here</button>
+                </form>
+                <Counter />
+                <NetworkLinks />
             </div>
         )
     }
