@@ -29,6 +29,7 @@ function Nav(props) {
           null
         }
       </div>
+      <Link to='/contact' className='navLink'>contact</Link>
     </div>
   )
 }
