@@ -15,6 +15,30 @@ class Contact extends React.Component {
         }
     }
 
+    handleChange = evt => {
+        evt.preventDefault()
+
+        this.setState({
+            [evt.target.name]: evt.target.value
+        })
+    }
+
+    handleSubmit = evt => {
+        evt.preventDefault()
+
+        const { name, company, email, phone, body } = this.state
+
+        const newBody = {body: `Name: ${name}, Company: ${company}, Email: ${email}, Phone: ${phone}... message: ${body}`}
+
+        this.props.text(newBody)
+            .then(() => {
+                console.log('message sent')
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     render() {
         return (
             <div className='Contact'>
@@ -22,26 +46,26 @@ class Contact extends React.Component {
                 <div className='iconContainer'>
                     <i className="fas fa-wave-square fa-lg"></i>
                 </div>
-                <form className='contactForm'>
+                <form className='contactForm' onSubmit={this.handleSubmit} >
                     <div id='contactDiv' className='contactName'>
                         <label className='contactNameLabel' htmlFor='name'>Full Name: </label>
-                        <input className='contactNameInput' required type='text' name='name' id='name' />
+                        <input className='contactNameInput' onChange={this.handleChange} required type='text' name='name' id='name' />
                     </div>
                     <div id='contactDiv' className='contactCompany'>
                         <label className='contactCompanyLabel' htmlFor='company'>Company: </label>
-                        <input className='contactCompanyInput' type='text' name='company' id='company' />
+                        <input className='contactCompanyInput' onChange={this.handleChange} type='text' name='company' id='company' />
                     </div>
                     <div id='contactDiv' className='contactEmail'>
                         <label className='contactEmailLabel' htmlFor='email'>Email: </label>
-                        <input className='contactEmailInput' required type='email' placeholder='janeDoe@gmail.com' name='email' id='email' />
+                        <input className='contactEmailInput' onChange={this.handleChange} required type='email' placeholder='janeDoe@gmail.com' name='email' id='email' />
                     </div>
                     <div id='contactDiv' className='contactPhone'>
                         <label className='contactPhoneLabel' htmlFor='phone'>Phone Number: </label>
-                        <input className='contactPhoneInput' type='tel' placeholder='12195551234' name='phone' id='phone' />
+                        <input className='contactPhoneInput' onChange={this.handleChange} type='tel' placeholder='12195551234' name='phone' id='phone' />
                     </div>
                     <div id='contactDiv' className='contactBody'>
                         <label className='contactBodyLabel' htmlFor='body'>Please Leave a Message: </label>
-                        <textarea className='contactBodyTextarea' required placeholder='    Whether it is for work or a criticism, I would love to hear what you have to say.' name='body' id='body' />
+                        <textarea className='contactBodyTextarea' onChange={this.handleChange} required placeholder='    Whether it is for work or a criticism, I would love to hear what you have to say.' name='body' id='body' />
                     </div>
                     <button className='contactButton' type='submit'>Send Me Your Info!</button>
                 </form>
