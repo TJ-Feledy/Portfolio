@@ -63,11 +63,11 @@ export function getCount(id) {
     }
 }
 
-export function text() {
+export function text(body) {
     return (dispatch) => {
         dispatch({ type: TEXT_START })
 
-        return axios.post(`https://tjs-portfolio.herokuapp.com/text`)
+        return axios.post(`https://tjs-portfolio.herokuapp.com/text`, { body })
             .then(res => {
                 console.log(res)
                 dispatch({ type: TEXT_SUCCESS, payload: res.data})
