@@ -1,4 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { text } from '../actions.js'
 
 import Counter from './Counter.js'
 import NetworkLinks from './NetworkLinks.js'
@@ -77,4 +80,8 @@ class Contact extends React.Component {
     }
 }
 
-export default Contact
+const mapDispatchToProps = {
+    text,
+}
+
+export default connect(null, mapDispatchToProps)(Contact)
