@@ -1101,11 +1101,49 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: rgb(22, 179, 231);
   -webkit-box-shadow: 0 0 0px 1000px rgb(59, 59, 59) inset;
 }
+@keyframes fromLeft1 {
+  0% { transform: translateX(-2000px) }
+  30% { transform: translateX(0); }
+}
+@keyframes fromLeft2 {
+  0% { transform: translateX(-2000px) }
+  20% { transform: translateX(-2000px) }
+  70% { transform: translateX(0); }
+}
+@keyframes fromLeft3 {
+  0% { transform: translateX(-2000px) }
+  50% { transform: translateX(-2000px) }
+  100% { transform: translateX(0); }
+}
+@keyframes fromRight1 {
+  0% { transform: translateX(2000px) }
+  /* 10% { transform: translateX(2000px) } */
+  45% { transform: translateX(0); }
+}
+@keyframes fromRight2 {
+  0% { transform: translateX(2000px) }
+  30% { transform: translateX(2000px) }
+  75% { transform: translateX(0); }
+}
+@keyframes fromBottom {
+  0% { transform: translateY(2000px) }
+  60% { transform: translateY(2000px) }
+  100% { transform: translateY(0); }
+}
+.contactName {
+  animation: 3s ease-in-out 0s 1 fromLeft1
+}
 .contactNameInput {
   border: 1px solid white;
 }
+.contactCompany {
+  animation: 3s ease-in-out 0s 1 fromRight1
+}
 .contactCompanyInput {
   border: 1px solid white;
+}
+.contactEmail {
+  animation: 2.5s ease-in-out 0s 1 fromLeft2;
 }
 .contactEmailInput::placeholder {
   color: white;
@@ -1113,6 +1151,9 @@ select:-webkit-autofill:focus {
 }
 .contactEmailInput {
   border: 1px solid white;
+}
+.contactPhone {
+  animation: 3s ease-in-out 0s 1 fromRight2
 }
 .contactPhoneInput::placeholder {
   color: white;
@@ -1122,6 +1163,7 @@ select:-webkit-autofill:focus {
   border: 1px solid white;
 }
 .contactBody {
+  animation: 3s ease-in-out 0s 1 fromLeft3;
   width: 80%;
   display: flex;
   flex-flow: column;
@@ -1146,6 +1188,7 @@ select:-webkit-autofill:focus {
   display: none;
 }
 .contactButton {
+  animation: 3.2s ease-in-out 0s 1 fromBottom;
   background-color: rgba(255, 255, 255, 0.226);
   border: none;
   color: rgb(47, 193, 241);
@@ -1154,4 +1197,7 @@ select:-webkit-autofill:focus {
   border-radius: 8px;
   box-shadow: 0 0 10px 5px white;
   margin-top: 20px;
+}
+.contactThankyou {
+  animation: fade2 4.45s ease-in-out;
 }
