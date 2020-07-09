@@ -64,7 +64,8 @@ body {
   margin: 0 10px 0 5px;
 }
 .countPopup {
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
   position: absolute;
   top: -65px;
   left: 75px;
@@ -76,7 +77,7 @@ body {
   border-radius: 8px 8px 8px 0px;
 }
 .Counter:hover .countPopup {
-  visibility: visible;
+  opacity: 1;
 }
 
 .App {
