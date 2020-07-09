@@ -8,7 +8,10 @@ import {
     UPDATE_COUNT_FAILED,
     GET_COUNT_START,
     GET_COUNT_SUCCESS,
-    GET_COUNT_FAILED
+    GET_COUNT_FAILED,
+    TEXT_START,
+    TEXT_SUCCESS,
+    TEXT_FAILED,
 } from './actions.js'
 
 const initialState = {
@@ -81,6 +84,29 @@ export default function(state=initialState, action) {
         }
     }
     case GET_COUNT_FAILED: {
+        console.log(action.payload)
+        return {
+            ...state,
+            error: action.payload,
+            isLoading: false
+        }
+    }
+    case TEXT_START: {
+        return {
+            ...state,
+            isLoading: true
+        }
+    }
+    case TEXT_SUCCESS: {
+        console.log(action.payload)
+        return {
+            ...state,
+            isLoading: false,
+            error: null,
+            counter: action.payload
+        }
+    }
+    case TEXT_FAILED: {
         console.log(action.payload)
         return {
             ...state,
