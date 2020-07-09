@@ -31,7 +31,7 @@ class Contact extends React.Component {
 
         const { name, company, email, phone, body } = this.state
 
-        const newBody = {body: `Name: ${name}, Company: ${company}, Email: ${email}, Phone: ${phone}... message: ${body}`}
+        const newBody = `Name: ${name}, Company: ${company}, Email: ${email}, Phone: ${phone}... message: ${body}`
 
         this.props.text(newBody)
             .then(() => {
