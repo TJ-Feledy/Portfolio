@@ -1164,7 +1164,7 @@ select:-webkit-autofill:focus {
   border: 1px solid white;
 }
 .contactBody {
-  animation: 3s ease-in-out 0s 1 fromLeft3;
+  animation: 2.8s ease-in-out 0s 1 fromLeft3;
   width: 80%;
   display: flex;
   flex-flow: column;
