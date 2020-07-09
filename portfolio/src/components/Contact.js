@@ -35,7 +35,7 @@ class Contact extends React.Component {
 
         this.props.text(newBody)
             .then(() => {
-                console.log('message sent')
+                console.log('message sent', newBody)
             })
             .catch(err => {
                 console.log(err)
