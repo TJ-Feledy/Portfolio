@@ -11,6 +11,7 @@ import About from './components/About.js'
 import Nav from './components/Nav.js'
 import Projects from './components/Projects.js'
 import Resume from './components/Resume.js'
+import Contact from './components/Contact';
 
 function App({ location }, props) {
 
@@ -54,6 +55,7 @@ function App({ location }, props) {
               <Route path='/values' render={props => <Values {...props} /> } />
               <Route path='/projects' render={props => <Projects {...props} /> } />
               <Route path='/resume' render={props => <Resume {...props} /> } />
+              <Route path='/contact' render={props => <Contact {...props} /> } />
             </Switch>
           </section>
         </CSSTransition>

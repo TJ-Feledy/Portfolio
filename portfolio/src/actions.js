@@ -12,6 +12,10 @@ export const GET_COUNT_START = 'GET_COUNT_START'
 export const GET_COUNT_SUCCESS = 'GET_COUNT_SUCCESS'
 export const GET_COUNT_FAILED = 'GET_COUNT_FAILED'
 
+export const TEXT_START = 'TEXT_START'
+export const TEXT_SUCCESS = 'TEXT_SUCCESS'
+export const TEXT_FAILED = 'TEXT_FAILED'
+
 /* action creator */
 export function initalizeCount(payload) {
     return (dispatch) => {
@@ -55,6 +59,22 @@ export function getCount(id) {
             .catch(err => {
                 const payload = err.response ? err.response.data : err
                 dispatch({ type: GET_COUNT_FAILED, payload })
+            })
+    }
+}
+
+export function text(body) {
+    return (dispatch) => {
+        dispatch({ type: TEXT_START })
+
+        return axios.post(`https://tjs-portfolio.herokuapp.com/text`, { body })
+            .then(res => {
+                console.log(res)
+                dispatch({ type: TEXT_SUCCESS, payload: res.data})
+            })
+            .catch(err => {
+                const payload = err.response ? err.response.data : err
+                dispatch({ type: TEXT_FAILED, payload })
             })
     }
 }
