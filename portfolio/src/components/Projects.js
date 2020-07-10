@@ -57,12 +57,12 @@ class Projects extends React.Component {
                         <p className='projectStackElement'>React</p>
                         <p className='projectStackElement'>Redux</p>
                       </div>
-                      <p className='projectDescription'>This was my very first Front-End project that I created on my own. It was built as a one week project for Lambda School. Some features include: Add, update, delete, or rate a meal. Filter meals by catigory or rating.</p>
+                      <p className='projectDescription'>This was my very first Front-End project that I created on my own. It was built as a one week project for Lambda School. Some features include: Add, update, delete, rate a meal, and filter meals by category or rating.</p>
                       <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/'>https://github.com/build-week-foodiefun/Front-End/</a></div>
                     </div>
                   </div>
                 </div>
-                : <Project project={ffHomePage}/>
+                : <Project className='project1' project={ffHomePage}/>
               }
             </div>
             <div onMouseEnter={this.toggleHover2} onMouseLeave={this.toggleHover2}>
@@ -85,7 +85,7 @@ class Projects extends React.Component {
                     </div>
                   </div>
                 </div>
-                : <Project project={g2itHome} />
+                : <Project className='project2' project={g2itHome} />
               }
             </div>
           </div>

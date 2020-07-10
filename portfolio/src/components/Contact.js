@@ -14,7 +14,8 @@ class Contact extends React.Component {
             company: '',
             email: '',
             phone: 0,
-            body: ''
+            body: '',
+            thankYou: 'Thank you, and I look forward to hearing from you!'
         }
     }
 
@@ -25,6 +26,24 @@ class Contact extends React.Component {
             [evt.target.name]: evt.target.value
         })
     }
+
+    mouseEnter = evt => {
+        evt.preventDefault()
+
+        this.setState({
+            thankYou: 'Your info will be texted directly to my personal phone!'
+        })
+    }
+
+    mouseLeave = evt => {
+        evt.preventDefault()
+
+        this.setState({
+            thankYou: 'Thank you, and I look forward to hearing from you!'
+        })
+    }
+
+
 
     handleSubmit = evt => {
         evt.preventDefault()
@@ -70,9 +89,9 @@ class Contact extends React.Component {
                         <label className='contactBodyLabel' htmlFor='body'>Please Leave a Message: </label>
                         <textarea className='contactBodyTextarea' onChange={this.handleChange} required placeholder='    Whether it is for work or a criticism, I would love to hear what you have to say.' name='body' id='body' />
                     </div>
-                    <button className='contactButton' type='submit'>Send Me Your Info!</button>
+                    <button className='contactButton' type='submit' onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>Send Me Your Info!</button>
                 </form>
-                <p className='contactThankyou'>Thank you, and I look forward to hearing from you!</p>
+                <p className='contactThankyou'>{this.state.thankYou}</p>
                 <Counter />
                 <NetworkLinks />
             </div>
