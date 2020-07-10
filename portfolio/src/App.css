@@ -1199,6 +1199,10 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 10px 5px white;
   margin-top: 20px;
 }
+.contactButton:hover {
+  box-shadow: 0 0 10px 1px white;
+  color: rgb(110, 196, 224);
+}
 .contactThankyou {
   animation: fade2 4.45s ease-in-out;
 }
