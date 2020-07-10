@@ -1049,6 +1049,24 @@ canvas {
 .repoLink:hover {
   text-decoration: underline;
 }
+.projectPointRight {
+  font-size: 22px;
+  color: white;
+}
+.projectLink {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.projectContact {
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+}
+.projectContact:hover {
+  color: inherit;
+  border-radius: 15px;
+  box-shadow: 0 0 20px .1px white inset;
+}
 
 .Contact {
   margin-top: 80px;

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Project from './Project'
 import Counter from './Counter.js'
@@ -17,6 +18,7 @@ class Projects extends React.Component {
     this.state = {
       hover1: false,
       hover2: false,
+      contact: false
     }
   }
 
@@ -29,6 +31,14 @@ class Projects extends React.Component {
     this.setState(prevState => ({
       hover2: !prevState.hover2
     }))
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        contact: true
+      })
+    }, 10000)
   }
 
 
@@ -90,6 +100,13 @@ class Projects extends React.Component {
             </div>
           </div>
         </div>
+        {
+          this.state.contact ?
+          <div className='bioLink projectLink'>
+            <i className="far bioPointRight projectPointRight fa-hand-point-right"></i>
+            <span className='bioLineLink'><Link className='bioContact projectContact' to='/contact'>If you like what you see, please contact me here!</Link></span>
+          </div> : null
+        }
         <Counter />
         <NetworkLinks />
       </div>
