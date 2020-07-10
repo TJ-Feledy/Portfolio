@@ -1057,6 +1057,8 @@ canvas {
   display: flex;
   align-items: center;
   margin-top: 50px;
+  animation-delay: 10s;
+  animation: fade 2s ease-in-out;
 }
 .projectContact {
   text-decoration: none;
