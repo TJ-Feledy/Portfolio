@@ -62,7 +62,7 @@ class Projects extends React.Component {
                     </div>
                   </div>
                 </div>
-                : <Project project={ffHomePage}/>
+                : <Project className='project1' project={ffHomePage}/>
               }
             </div>
             <div onMouseEnter={this.toggleHover2} onMouseLeave={this.toggleHover2}>
@@ -85,7 +85,7 @@ class Projects extends React.Component {
                     </div>
                   </div>
                 </div>
-                : <Project project={g2itHome} />
+                : <Project className='project2' project={g2itHome} />
               }
             </div>
           </div>
