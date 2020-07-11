@@ -13,7 +13,7 @@ class Contact extends React.Component {
             name: '',
             company: '',
             email: '',
-            phone: 0,
+            phone: '',
             body: '',
             thankYou: 'Thank you, and I look forward to hearing from you!'
         }
@@ -54,7 +54,13 @@ class Contact extends React.Component {
 
         this.props.text(newBody)
             .then(() => {
-                console.log('message sent', newBody)
+                this.setState({
+                    name: '',
+                    company: '',
+                    email: '',
+                    phone: '',
+                    body: ''
+                })
             })
             .catch(err => {
                 console.log(err)
@@ -62,6 +68,7 @@ class Contact extends React.Component {
     }
 
     render() {
+        const { name, email, company, phone, body } = this.state
         return (
             <div className='Contact'>
                 <h1 className='aboutHeader'>CONTACT</h1>
@@ -71,23 +78,23 @@ class Contact extends React.Component {
                 <form className='contactForm' onSubmit={this.handleSubmit} >
                     <div id='contactDiv' className='contactName'>
                         <label className='contactNameLabel' htmlFor='name'>Full Name: </label>
-                        <input className='contactNameInput' onChange={this.handleChange} required type='text' name='name' id='name' />
+                        <input className='contactNameInput' value={name} onChange={this.handleChange} required type='text' name='name' id='name' />
                     </div>
                     <div id='contactDiv' className='contactCompany'>
                         <label className='contactCompanyLabel' htmlFor='company'>Company: </label>
-                        <input className='contactCompanyInput' onChange={this.handleChange} type='text' name='company' id='company' />
+                        <input className='contactCompanyInput' value={company} onChange={this.handleChange} type='text' name='company' id='company' />
                     </div>
                     <div id='contactDiv' className='contactEmail'>
                         <label className='contactEmailLabel' htmlFor='email'>Email: </label>
-                        <input className='contactEmailInput' onChange={this.handleChange} required type='email' placeholder='janeDoe@gmail.com' name='email' id='email' />
+                        <input className='contactEmailInput' value={email} onChange={this.handleChange} required type='email' placeholder='janeDoe@gmail.com' name='email' id='email' />
                     </div>
                     <div id='contactDiv' className='contactPhone'>
                         <label className='contactPhoneLabel' htmlFor='phone'>Phone Number: </label>
-                        <input className='contactPhoneInput' onChange={this.handleChange} type='tel' placeholder='12195551234' name='phone' id='phone' />
+                        <input className='contactPhoneInput' value={phone} onChange={this.handleChange} type='tel' placeholder='12195551234' name='phone' id='phone' />
                     </div>
                     <div id='contactDiv' className='contactBody'>
                         <label className='contactBodyLabel' htmlFor='body'>Please Leave a Message: </label>
-                        <textarea className='contactBodyTextarea' onChange={this.handleChange} required placeholder='    Whether it is for work or a criticism, I would love to hear what you have to say.' name='body' id='body' />
+                        <textarea className='contactBodyTextarea' value={body} onChange={this.handleChange} required placeholder='    Whether it is for work or a criticism, I would love to hear what you have to say.' name='body' id='body' />
                     </div>
                     <button className='contactButton' type='submit' onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>Send Me Your Info!</button>
                 </form>
