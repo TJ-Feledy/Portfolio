@@ -15,7 +15,8 @@ class Contact extends React.Component {
             email: '',
             phone: '',
             body: '',
-            thankYou: 'Thank you, and I look forward to hearing from you!'
+            bodyPlaceholder: '    Whether it is for work or a criticism, I would love to hear what you have to say.',
+            thankYou: 'I look forward to hearing from you!'
         }
     }
 
@@ -39,7 +40,7 @@ class Contact extends React.Component {
         evt.preventDefault()
 
         this.setState({
-            thankYou: 'Thank you, and I look forward to hearing from you!'
+            thankYou: 'I look forward to hearing from you!'
         })
     }
 
@@ -59,7 +60,8 @@ class Contact extends React.Component {
                     company: '',
                     email: '',
                     phone: '',
-                    body: ''
+                    body: '',
+                    bodyPlaceholder: 'Thank you, and I hope you enjoyed my portfolio!'
                 })
             })
             .catch(err => {
@@ -68,7 +70,7 @@ class Contact extends React.Component {
     }
 
     render() {
-        const { name, email, company, phone, body } = this.state
+        const { name, email, company, phone, body, bodyPlaceholder } = this.state
         return (
             <div className='Contact'>
                 <h1 className='aboutHeader'>CONTACT</h1>
@@ -94,7 +96,7 @@ class Contact extends React.Component {
                     </div>
                     <div id='contactDiv' className='contactBody'>
                         <label className='contactBodyLabel' htmlFor='body'>Please Leave a Message: </label>
-                        <textarea className='contactBodyTextarea' value={body} onChange={this.handleChange} required placeholder='    Whether it is for work or a criticism, I would love to hear what you have to say.' name='body' id='body' />
+                        <textarea className='contactBodyTextarea' value={body} onChange={this.handleChange} required placeholder={bodyPlaceholder} name='body' id='body' />
                     </div>
                     <button className='contactButton' type='submit' onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>Send Me Your Info!</button>
                 </form>
