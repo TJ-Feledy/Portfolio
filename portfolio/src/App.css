@@ -957,7 +957,7 @@ canvas {
   height: 100%;
   width: 100%;
   margin: 10px;
-  animation: fade2 1.5s ease-in-out;
+  animation: fade2 1.25s ease-out;
 }
 
 .Project {
