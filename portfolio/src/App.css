@@ -967,18 +967,18 @@ canvas {
 
 .Project {
   margin: 1rem 1rem 1rem 1rem;
-  height: 17rem;
-  width: 17rem;
+  height: 18rem;
+  width: 18rem;
 }
 .projectImg {
-  height: 17rem;
-  width: 17rem;
+  height: 18rem;
+  width: 18rem;
   border-radius: 10px;
 }
 .hoverContainer {
   margin: 1rem 1rem 1rem 1rem;
-  height: 17rem;
-  width: 17rem;
+  height: 18rem;
+  width: 18rem;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.753);
   display: flex;
@@ -1032,6 +1032,14 @@ canvas {
 .gitIcon {
   font-size: larger;
 }
+.projectPoint {
+  margin-left: 3px;
+}
+.projectLinks {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
 .deployedTo {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1042,16 +1050,20 @@ canvas {
 }
 .deployLink {
   text-decoration: none;
+  margin-left: 5px;
 }
 .deployLink:hover {
   text-decoration: underline;
 }
 .gitDiv {
+  display: flex;
   animation: fade 3.5s linear;
 }
 .repoLink {
   text-decoration: none;
   margin: 0;
+  text-align: left;
+  margin-left: 5px;
 }
 .repoLink:hover {
   text-decoration: underline;

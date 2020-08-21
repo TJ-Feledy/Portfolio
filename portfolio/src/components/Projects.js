@@ -68,8 +68,10 @@ class Projects extends React.Component {
                         <p className='projectStackElement'>Redux</p>
                       </div>
                       <p className='projectDescription'>This was my very first Front-End project that I created on my own. It was built as a one week project for Lambda School. Some features include: Add, update, delete, rate a meal, and filter meals by category or rating.</p>
-                      <p className='deployedTo'><i className="far pointRight fa-hand-point-right"></i> <a className='deployLink' href="https://foodie-fun-front-end.netlify.app/">foodie-fun-front-end.netlify.app/</a></p>
-                      <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/'>https://github.com/build-week-foodiefun/Front-End/</a></div>
+                      <div className='projectLinks'>
+                        <p className='deployedTo'><i className="far pointRight projectPoint fa-hand-point-right"></i> <a className='deployLink' href="https://foodie-fun-front-end.netlify.app/">foodie-fun-front-end.netlify.app/</a></p>
+                        <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/build-week-foodiefun/Front-End/'>https://github.com/build-week-foodiefun/Front-End/</a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -91,8 +93,10 @@ class Projects extends React.Component {
                         <p className='projectStackElement'>Redux</p>
                       </div>
                       <p className='projectDescription'>I was part of a 3 person team on the Front-End portion of this todo app. Some features include: Create tasks, edit tasks, delete tasks, mark tasks as completed, and in-app notifications.</p>
-                      <p className='deployedTo'><i className="far pointRight fa-hand-point-right"></i>Check it out here: <a className='deployLink' href="get2it.netlify.app">get2it.netlify.app</a></p>
-                      <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/TJ-Feledy/Get2It'>https://github.com/TJ-Feledy/Get2It</a></div>
+                      <div className='projectLinks'>
+                        <p className='deployedTo'><i className="far pointRight projectPoint fa-hand-point-right"></i> <a className='deployLink' href="get2it.netlify.app">get2it.netlify.app</a></p>
+                        <div className='gitDiv'><i className="fab gitIcon fa-github"></i> <a className='repoLink' href='https://github.com/TJ-Feledy/Get2It'>https://github.com/TJ-Feledy/Get2It</a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
