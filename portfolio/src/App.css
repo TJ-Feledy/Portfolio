@@ -753,21 +753,21 @@ body {
 }
 .myGitLink {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.103);
+  color: rgba(255, 255, 255, 0.199);
 }
 .myGitLink:hover {
   color: rgba(255, 255, 255, 0.281);
 }
 .myLinkedInLink {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.103);
+  color: rgba(255, 255, 255, 0.199);
 }
 .myLinkedInLink:hover {
   color: rgba(255, 255, 255, 0.281);
 }
 .myResumeLink {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.103);
+  color: rgba(255, 255, 255, 0.199);
 }
 .myResumeLink:hover {
   color: rgba(255, 255, 255, 0.281);
