@@ -9,17 +9,19 @@ class Project extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            project: this.props.project,
+            image: this.props.project.image,
+            name: this.props.project.name
         }
     }
 
     render() {
 
-        const {project} = this.state
+        const {image, name} = this.state
 
         return (
             <div className='Project'>
-                <img className='projectImg' src={project} alt='project' />
+                <img className='projectImg' src={image} alt='project' />
+                <div className='projectTitle'>{name}</div>
             </div>
         )
     }

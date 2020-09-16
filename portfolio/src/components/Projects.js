@@ -76,7 +76,7 @@ class Projects extends React.Component {
                   </div>
                   <button className='closeButton'>exit</button>
                 </div>
-                : <Project className='projectComponent' project={ffHomePage}/>
+                : <Project className='projectComponent' project={{image: ffHomePage, name: 'Foodie-Fun'}}/>
               }
             </div>
             <div className='singleProject' onClick={this.toggleClick2}>
@@ -102,7 +102,7 @@ class Projects extends React.Component {
                   </div>
                   <button className='closeButton'>exit</button>
                 </div>
-                : <Project className='projectComponent' project={g2itHome} />
+                : <Project className='projectComponent' project={{image: g2itHome, name: 'Get2It'}} />
               }
             </div>
           </div>
