@@ -66,16 +66,20 @@ class About extends React.Component {
                 <span className='bioLine'>I love to create something I can be proud of, to meet new people, and to learn new things.</span>
                 <span className='bioLine'>For me, this isn't just work... I enjoy the challenges that each new project brings.</span>
               </div>
-              <div className='bioLinks'>
-                <div className='bioLink'>
-                  <i className="far bioPointRight fa-hand-point-right"></i>
-                  <span className='bioLineLink'><Link className='bioValues' to='/values'>Here are some values that I put into all of my work.</Link></span>
-                </div>
-                <div className='bioLink'>
-                  <i className="far bioPointRight fa-hand-point-right"></i>
-                  <span className='bioLineLink'><Link className='bioContact' to='/contact'>If you would like to contact me, you can do that here.</Link></span>
-                </div>
-              </div>
+            </div>
+          </div>
+          <div className='bioLinks'>
+            <div className='bioLink'>
+              <i className="far bioPointRight fa-hand-point-right"></i>
+              <span className='bioLineLink'><Link className='bioValues' to='/values'>Here are some values that I put into all of my work.</Link></span>
+            </div>
+            <div className='bioLink'>
+              <i className="far bioPointRight fa-hand-point-right"></i>
+              <span className='bioLineLink'><Link className='bioContact' to='/projects'>Check out some of my projects.</Link></span>
+            </div>
+            <div className='bioLink'>
+              <i className="far bioPointRight fa-hand-point-right"></i>
+              <span className='bioLineLink'><Link className='bioContact' to='/contact'>If you would like to contact me, you can do that here.</Link></span>
             </div>
           </div>
         </div>

@@ -689,6 +689,8 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
+  justify-self: flex-start;
+  margin-bottom: 20px;
 }
 .bioLink {
   display: flex;
@@ -817,6 +819,19 @@ canvas {
 @media (max-width: 1040px) {
   .techStack {
     order: 2;
+  }
+  .Me {
+    order: 1;
+  }
+  .bioLinks {
+    order: 3;
+  }
+  .infoContainer {
+    flex-flow: column;
+    align-items: center;
+  }
+  .bioLinks {
+    margin-top: 40px;
   }
 }
 .techStack {
