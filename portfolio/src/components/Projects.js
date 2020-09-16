@@ -22,12 +22,12 @@ class Projects extends React.Component {
     }
   }
 
-  toggleHover1 = () => {
+  toggleClick1 = () => {
     this.setState(prevState => ({
       hover1: !prevState.hover1
     }))
   }
-  toggleHover2 = () => {
+  toggleClick2 = () => {
     this.setState(prevState => ({
       hover2: !prevState.hover2
     }))
@@ -53,7 +53,7 @@ class Projects extends React.Component {
 
         <div className='projectsContainer'>
           <div className='projectWrapper'>
-            <div onMouseEnter={this.toggleHover1} onMouseLeave={this.toggleHover1}>
+            <div onClick={this.toggleClick1}>
               {
                 this.state.hover1 ?
                 <div className='hoverContainer'>
@@ -78,7 +78,7 @@ class Projects extends React.Component {
                 : <Project className='project1' project={ffHomePage}/>
               }
             </div>
-            <div onMouseEnter={this.toggleHover2} onMouseLeave={this.toggleHover2}>
+            <div onClick={this.toggleClick2}>
               {
                 this.state.hover2 ?
                 <div className='hoverContainer'>
