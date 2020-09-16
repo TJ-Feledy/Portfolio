@@ -53,7 +53,7 @@ class Projects extends React.Component {
 
         <div className='projectsContainer'>
           <div className='projectWrapper'>
-            <div onClick={this.toggleClick1}>
+            <div className='singleProject' onClick={this.toggleClick1}>
               {
                 this.state.hover1 ?
                 <div className='hoverContainer'>
@@ -74,11 +74,12 @@ class Projects extends React.Component {
                       </div>
                     </div>
                   </div>
+                  <button className='closeButton'>exit</button>
                 </div>
-                : <Project className='project1' project={ffHomePage}/>
+                : <Project className='projectComponent' project={ffHomePage}/>
               }
             </div>
-            <div onClick={this.toggleClick2}>
+            <div className='singleProject' onClick={this.toggleClick2}>
               {
                 this.state.hover2 ?
                 <div className='hoverContainer'>
@@ -99,8 +100,9 @@ class Projects extends React.Component {
                       </div>
                     </div>
                   </div>
+                  <button className='closeButton'>exit</button>
                 </div>
-                : <Project className='project2' project={g2itHome} />
+                : <Project className='projectComponent' project={g2itHome} />
               }
             </div>
           </div>

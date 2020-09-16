@@ -985,6 +985,10 @@ canvas {
   height: 18rem;
   width: 18rem;
 }
+.Project:hover {
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px 0px white;
+}
 .projectImg {
   height: 18rem;
   width: 18rem;
@@ -1102,6 +1106,26 @@ canvas {
   color: inherit;
   border-radius: 15px;
   box-shadow: 0 0 20px .1px white inset;
+}
+
+.singleProject {
+  position: relative;
+}
+.closeButton {
+  position: absolute;
+  bottom: 19px;
+  right: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 8px;
+  border-radius: 8px;
+  border-width: 1px;
+  outline: none;
+}
+.closeButton:hover {
+  background-color: black;
+  color: white;
 }
 
 .Contact {
